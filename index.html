@@ -19,24 +19,8 @@
             letter-spacing: 2px;
         }
 
-        button {
-            margin-top: 120px;
-            padding: 20px 40px;
-            font-size: 28px;
-            cursor: pointer;
-            border: none;
-            border-radius: 10px;
-            background-color: #ff0055;
-            color: white;
-        }
-
-        button:hover {
-            background-color: #ff336f;
-        }
-
         #video {
-            display: none;
-            margin-top: 40px;
+            margin-top: 120px;
         }
     </style>
 </head>
@@ -44,23 +28,15 @@
 
     <h1>WELCOME PLEASANT — THIS IS SUSAN'S WEBSITE</h1>
 
-    <button onclick="rickroll()">Click Here</button>
-
     <div id="video">
         <iframe width="560" height="315"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0"
             title="Rickroll"
             frameborder="0"
             allow="autoplay; encrypted-media"
             allowfullscreen>
         </iframe>
     </div>
-
-    <script>
-        function rickroll() {
-            document.getElementById("video").style.display = "block";
-        }
-    </script>
 
 </body>
 </html>
