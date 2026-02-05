@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="Susan Khatri's first website. A fun experiment and personal project.">
-
-<meta name="author" content="Susan Khatri">
-
-<title>Susan Khatri | First Website</title>
+  <meta charset="UTF-8">
+  <title>Campus Market</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>Susan Khatri</h1>
+<header>
+  <h2>Campus Market</h2>
+  <p>Buy & Sell Books, Notes & More</p>
+</header>
 
-<p>
-This is my first personal website where I experiment with HTML,
-web development, and fun projects.
-</p>
+<div class="card">
+  <h3>📚 Post Item</h3>
+  <button onclick="toggleForm()">Post Item</button>
 
-<h2>WELCOME LOWLIFES!! THIS IS SUSAN'S WEBSITE</h2>
+  <div id="postForm" class="hidden">
+    <input id="name" placeholder="Item name">
+    <input id="price" placeholder="Price (Rs)">
+    <input id="contact" placeholder="WhatsApp / Phone">
 
-<iframe
-  width="700"
-  height="500"
-  src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1"
-  title="RickRoll"
-  allow="autoplay; encrypted-media"
-  allowfullscreen>
-</iframe>
+   <p><b>Listing Fee:</b> Rs 15 (online)</p>
 
-<a href="SecondPage.html" title="This Takes You to THE SECOND PAGE!!">
-  <h3>Second Page!!</h3>
-</a>
+<label>
+  <input type="checkbox" id="onlinePay">
+  Buyer can pay online (3% commission)
+</label>
 
+
+    <button onclick="addItem()">Submit</button>
+  </div>
+</div>
+
+<h2 class="center">📦 Listings</h2>
+<div id="listings"></div>
+
+<script src="app.js"></script>
 </body>
 </html>
