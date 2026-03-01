@@ -2,42 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Campus Market</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Susan Khatri | CV</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <header>
+    <h1>Susan Khatri</h1>
+    <p>Curriculum Vitae</p>
+  </header>
 
-<header>
-  <h2>Campus Market</h2>
-  <p>Buy & Sell Books, Notes & More</p>
-</header>
+  <main class="cv-container">
+    <section class="card">
+      <h2>Profile</h2>
+      <p>
+        Motivated undergraduate student with a strong interest in web development and product building.
+        I enjoy creating simple, useful digital solutions and continuously improving my technical and communication skills.
+      </p>
+    </section>
 
-<div class="card">
-  <h3>📚 Post Item</h3>
-  <button onclick="toggleForm()">Post Item</button>
+    <section class="card">
+      <h2>Contact</h2>
+      <ul class="cv-list">
+        <li><strong>Email:</strong> susan@example.com</li>
+        <li><strong>Phone:</strong> +977-9800000000</li>
+        <li><strong>Location:</strong> Kathmandu, Nepal</li>
+      </ul>
+    </section>
 
-  <div id="postForm" class="hidden">
-    <input id="name" placeholder="Item name">
-    <input id="price" placeholder="Price (Rs)">
-    <input id="contact" placeholder="WhatsApp / Phone">
+    <section class="card">
+      <h2>Skills</h2>
+      <ul class="cv-list">
+        <li>HTML, CSS, JavaScript</li>
+        <li>Responsive web design</li>
+        <li>Problem solving and teamwork</li>
+      </ul>
+    </section>
 
-   <p><b>Listing Fee:</b> Rs 15 (online)</p>
+    <section class="card">
+      <h2>Education</h2>
+      <p><strong>Bachelor's Degree (Ongoing)</strong></p>
+      <p>Undergraduate student.</p>
+    </section>
 
-<label>
-  <input type="checkbox" id="onlinePay">
-  Buyer can pay online (3% commission)
-</label>
+    <section class="card">
+      <h2>Projects</h2>
+      <div class="project-item">
+        <h3>Personal Website</h3>
+        <p>Designed and built a personal website to present my profile, projects, and learning progress.</p>
+      </div>
+      <div class="project-item">
+        <h3>Campus Marketplace Prototype</h3>
+        <p>Created a prototype marketplace concept for students to post and discover learning resources.</p>
+      </div>
+    </section>
 
-
-    <button onclick="addItem()">Submit</button>
-  </div>
-</div>
-
-<h2 class="center">📦 Listings</h2>
-<div id="listings"></div>
-
-<script src="app.js"></script>
+    <section class="card">
+      <h2>Languages</h2>
+      <ul class="cv-list">
+        <li>English</li>
+        <li>Nepali</li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
