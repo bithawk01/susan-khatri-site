@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7242783764669013"
+      crossorigin="anonymous"></script>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -79,8 +81,7 @@
 
     .ad-banner { width: 100%; min-height: 90px; background: var(--surface); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: center; position: relative; z-index: 10; }
     .ad-label { font-family: var(--mono); font-size: 9px; color: var(--muted); position: absolute; top: 6px; left: 12px; letter-spacing: .1em; text-transform: uppercase; }
-    .ad-slot { width: 728px; max-width: 95%; height: 90px; background: repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px); border: 1px dashed var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; color: var(--muted); }
-
+    
     .hero { position: relative; z-index: 2; text-align: center; padding: 90px 24px 70px; max-width: 800px; margin: 0 auto; }
     .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(56,189,248,.1); border: 1px solid rgba(56,189,248,.3); color: var(--accent); font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; margin-bottom: 28px; }
     h1 { font-size: clamp(2.2rem, 5.5vw, 3.8rem); font-weight: 800; line-height: 1.1; margin-bottom: 20px; letter-spacing: -.02em; }
@@ -120,33 +121,12 @@
     .tool-tag.orange { background: rgba(251,146,60,.1); color: var(--orange); border: 1px solid rgba(251,146,60,.2); }
     .tool-tag.green { background: rgba(52,211,153,.1); color: var(--green); border: 1px solid rgba(52,211,153,.2); }
 
-    .ad-mid-wrap { position: relative; z-index: 2; max-width: 1000px; margin: 0 auto 60px; padding: 0 24px; }
-    .ad-mid-slot { min-height: 250px; background: var(--surface); border: 1px dashed var(--border); border-radius: 10px; display: flex; align-items: center; justify-content: center; position: relative; }
-    .ad-inner { width: 728px; max-width: 95%; height: 90px; background: repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px); border: 1px dashed var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; color: var(--muted); }
-
-    .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    @media (max-width: 640px) { .mission-grid { grid-template-columns: 1fr; } }
-    .mission-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; }
-    .mission-card.featured { border-color: rgba(56,189,248,.3); box-shadow: var(--glow); grid-column: span 2; }
-    @media (max-width: 640px) { .mission-card.featured { grid-column: span 1; } }
-    .mission-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; }
-    .mission-card p { font-size: .85rem; color: var(--muted); line-height: 1.7; }
-
     .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
     .step-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; position: relative; overflow: hidden; }
     .step-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
     .step-num { font-family: var(--mono); font-size: 2rem; font-weight: 700; color: rgba(56,189,248,.15); line-height: 1; margin-bottom: 12px; }
     .step-card h3 { font-size: .95rem; font-weight: 700; margin-bottom: 8px; }
     .step-card p { font-size: .82rem; color: var(--muted); line-height: 1.6; }
-
-    .faq { display: grid; gap: 10px; }
-    details { background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: border-color .2s; }
-    details[open] { border-color: rgba(56,189,248,.35); }
-    summary { padding: 18px 22px; font-size: .93rem; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; user-select: none; }
-    summary::-webkit-details-marker { display: none; }
-    summary::after { content: '+'; font-size: 1.3rem; color: var(--accent); transition: transform .2s; flex-shrink: 0; }
-    details[open] summary::after { transform: rotate(45deg); }
-    .faq-body { padding: 0 22px 18px; font-size: .85rem; color: var(--muted); line-height: 1.75; }
 
     .cta-banner { position: relative; z-index: 2; max-width: 1000px; margin: 0 auto 80px; padding: 0 24px; }
     .cta-inner { background: linear-gradient(135deg, #0d1f3a, #111d2e); border: 1px solid rgba(56,189,248,.3); border-radius: 16px; padding: 50px 40px; text-align: center; box-shadow: var(--glow); }
@@ -163,8 +143,7 @@
     .footer-links a:hover { color: var(--accent); }
     .footer-bottom { max-width: 1000px; margin: 28px auto 0; padding-top: 20px; border-top: 1px solid var(--border); font-size: .75rem; color: var(--muted); font-family: var(--mono); text-align: center; }
 
-    .ad-sticky { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(13,19,33,.95); backdrop-filter: blur(10px); border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: center; padding: 8px 16px; z-index: 200; gap: 14px; }
-    .ad-sticky-slot { width: 728px; max-width: 80%; height: 60px; background: repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px); border: 1px dashed var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; color: var(--muted); }
+    .ad-sticky { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(13,19,33,.95); backdrop-filter: blur(10px); border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: center; padding: 8px 16px; z-index: 200; gap: 14px; min-height: 70px; }
     .close-sticky { background: none; border: 1px solid var(--border); color: var(--muted); width: 28px; height: 28px; border-radius: 50%; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: border-color .2s, color .2s; }
     .close-sticky:hover { border-color: var(--accent); color: var(--accent); }
 
@@ -175,8 +154,7 @@
 
   <nav>
     <a href="index.html" class="nav-logo">
-      <div class="nav-dot"></div>
-      Susan<span>Khatri</span>
+      <div class="nav-dot"></div> Susan<span>Khatri</span>
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -188,7 +166,13 @@
 
   <div class="ad-banner">
     <span class="ad-label">Advertisement</span>
-    <div class="ad-slot" id="ad-top">728 × 90 — Leaderboard Ad</div>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7242783764669013"
+         data-ad-slot="YOUR_TOP_SLOT_ID"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 
   <div class="hero">
@@ -279,7 +263,11 @@
 
   <div class="ad-sticky" id="sticky-ad">
     <span class="ad-label" style="font-family:var(--mono); font-size:9px; color:var(--muted); letter-spacing:.1em; text-transform:uppercase;">Ad</span>
-    <div class="ad-sticky-slot" id="ad-bottom">728 × 60 — Sticky Footer Ad</div>
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:728px;height:60px"
+         data-ad-client="ca-pub-7242783764669013"
+         data-ad-slot="YOUR_FOOTER_SLOT_ID"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     <button class="close-sticky" onclick="document.getElementById('sticky-ad').style.display='none'">×</button>
   </div>
 
