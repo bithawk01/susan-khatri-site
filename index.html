@@ -4,7 +4,6 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- SEO -->
   <title>Susan Khatri Tools Hub – Free Portable Software for School Computers</title>
   <meta name="description" content="Susan Khatri Tools Hub helps students download Java, Python, and other coding tools as portable ZIP files — no admin rights or installation needed. Built for school computers."/>
   <meta name="keywords" content="portable software school computers, Java download no admin, Python portable, coding tools for students, Susan Khatri, software without installation, school computer tools Nepal"/>
@@ -12,7 +11,6 @@
   <meta name="robots" content="index, follow"/>
   <link rel="canonical" href="https://susan-khatri.com.np/"/>
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://susan-khatri.com.np/"/>
   <meta property="og:title" content="Susan Khatri Tools Hub – Portable Software for Students"/>
@@ -20,13 +18,11 @@
   <meta property="og:image" content="https://susan-khatri.com.np/og-image.png"/>
   <meta property="og:site_name" content="Susan Khatri Tools Hub"/>
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Susan Khatri Tools Hub – Portable Software for Students"/>
   <meta name="twitter:description" content="Free portable coding tools for school computers. No admin rights needed."/>
   <meta name="twitter:image" content="https://susan-khatri.com.np/og-image.png"/>
 
-  <!-- Schema: WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -43,48 +39,6 @@
       "target": "https://susan-khatri.com.np/?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
-  }
-  </script>
-
-  <!-- Schema: FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is Susan Khatri Tools Hub?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Susan Khatri Tools Hub is a free resource website that helps students download coding tools like Java and Python as portable ZIP files that work on school computers without needing admin rights."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need to install anything to use the tools?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. All tools featured on this site are available as portable ZIP files. Just download and extract — no installation or admin rights required."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is this website free?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, completely free. Every guide, download link, and tutorial on this site costs nothing."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Who is this website for?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "This site is built for students — especially those in schools or labs where computers are locked and do not allow software installation. It is also useful for beginner coders getting started with Java or Python."
-        }
-      }
-    ]
   }
   </script>
 
@@ -109,790 +63,224 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.7; overflow-x: hidden; padding-bottom: 80px; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(rgba(56,189,248,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(56,189,248,.04) 1px, transparent 1px); background-size: 48px 48px; pointer-events: none; z-index: 0; }
+    body::after { content: ''; position: fixed; top: -200px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(56,189,248,.07) 0%, transparent 70%); pointer-events: none; z-index: 0; }
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--sans);
-      font-size: 16px;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    /* Grid bg */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(56,189,248,.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(56,189,248,.04) 1px, transparent 1px);
-      background-size: 48px 48px;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Glow orbs */
-    body::after {
-      content: '';
-      position: fixed;
-      top: -200px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 700px;
-      height: 700px;
-      background: radial-gradient(circle, rgba(56,189,248,.07) 0%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(6,9,16,.85);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
-      padding: 0 24px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .nav-logo {
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--text);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .nav-logo span {
-      color: var(--accent);
-    }
-    .nav-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 8px var(--accent);
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: .4; }
-    }
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      list-style: none;
-    }
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: .88rem;
-      font-weight: 500;
-      transition: color .2s;
-    }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(6,9,16,.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-weight: 700; font-size: 1rem; color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .nav-logo span { color: var(--accent); }
+    .nav-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .4; } }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: .88rem; font-weight: 500; transition: color .2s; }
     .nav-links a:hover { color: var(--accent); }
 
-    /* ── AD BANNER ── */
-    .ad-banner {
-      width: 100%;
-      min-height: 90px;
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      z-index: 10;
-    }
-    .ad-label {
-      font-family: var(--mono);
-      font-size: 9px;
-      color: var(--muted);
-      position: absolute;
-      top: 6px; left: 12px;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-    }
-    .ad-slot {
-      width: 728px;
-      max-width: 95%;
-      height: 90px;
-      background: repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px);
-      border: 1px dashed var(--border);
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--muted);
-    }
+    .ad-banner { width: 100%; min-height: 90px; background: var(--surface); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: center; position: relative; z-index: 10; }
+    .ad-label { font-family: var(--mono); font-size: 9px; color: var(--muted); position: absolute; top: 6px; left: 12px; letter-spacing: .1em; text-transform: uppercase; }
+    .ad-slot { width: 728px; max-width: 95%; height: 90px; background: repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px); border: 1px dashed var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; color: var(--muted); }
 
-    /* ── HERO ── */
-    .hero {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      padding: 90px 24px 70px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(56,189,248,.1);
-      border: 1px solid rgba(56,189,248,.3);
-      color: var(--accent);
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      padding: 6px 16px;
-      border-radius: 20px;
-      margin-bottom: 28px;
-    }
-    h1 {
-      font-size: clamp(2.2rem, 5.5vw, 3.8rem);
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 20px;
-      letter-spacing: -.02em;
-    }
-    h1 .highlight {
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .hero-sub {
-      font-size: 1.08rem;
-      color: var(--muted);
-      max-width: 580px;
-      margin: 0 auto 36px;
-      font-weight: 300;
-    }
-    .hero-ctas {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--accent);
-      color: #060910;
-      font-weight: 700;
-      font-size: .95rem;
-      padding: 13px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: box-shadow .2s, transform .15s;
-      box-shadow: var(--glow);
-    }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 40px rgba(56,189,248,.4);
-    }
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: transparent;
-      color: var(--text);
-      font-weight: 600;
-      font-size: .95rem;
-      padding: 13px 28px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      text-decoration: none;
-      transition: border-color .2s, transform .15s;
-    }
-    .btn-secondary:hover {
-      border-color: var(--accent2);
-      transform: translateY(-2px);
-    }
+    .hero { position: relative; z-index: 2; text-align: center; padding: 90px 24px 70px; max-width: 800px; margin: 0 auto; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(56,189,248,.1); border: 1px solid rgba(56,189,248,.3); color: var(--accent); font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; margin-bottom: 28px; }
+    h1 { font-size: clamp(2.2rem, 5.5vw, 3.8rem); font-weight: 800; line-height: 1.1; margin-bottom: 20px; letter-spacing: -.02em; }
+    h1 .highlight { background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-sub { font-size: 1.08rem; color: var(--muted); max-width: 580px; margin: 0 auto 36px; font-weight: 300; }
+    .hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #060910; font-weight: 700; font-size: .95rem; padding: 13px 28px; border-radius: 8px; text-decoration: none; transition: box-shadow .2s, transform .15s; box-shadow: var(--glow); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(56,189,248,.4); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--text); font-weight: 600; font-size: .95rem; padding: 13px 28px; border-radius: 8px; border: 1px solid var(--border); text-decoration: none; transition: border-color .2s, transform .15s; }
+    .btn-secondary:hover { border-color: var(--accent2); transform: translateY(-2px); }
 
-    /* ── STATS ROW ── */
-    .stats {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      justify-content: center;
-      gap: 0;
-      flex-wrap: wrap;
-      max-width: 700px;
-      margin: 0 auto 70px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      background: var(--card);
-    }
-    .stat {
-      flex: 1;
-      min-width: 140px;
-      padding: 24px 20px;
-      text-align: center;
-      border-right: 1px solid var(--border);
-    }
+    .stats { position: relative; z-index: 2; display: flex; justify-content: center; gap: 0; flex-wrap: wrap; max-width: 700px; margin: 0 auto 70px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--card); }
+    .stat { flex: 1; min-width: 140px; padding: 24px 20px; text-align: center; border-right: 1px solid var(--border); }
     .stat:last-child { border-right: none; }
-    .stat-val {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--accent);
-      display: block;
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-    .stat-lbl {
-      font-size: .75rem;
-      color: var(--muted);
-      font-family: var(--mono);
-      letter-spacing: .06em;
-    }
+    .stat-val { font-size: 1.8rem; font-weight: 800; color: var(--accent); display: block; line-height: 1; margin-bottom: 6px; }
+    .stat-lbl { font-size: .75rem; color: var(--muted); font-family: var(--mono); letter-spacing: .06em; }
 
-    /* ── SECTION COMMONS ── */
-    section {
-      position: relative;
-      z-index: 2;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 24px 80px;
-    }
-    .section-tag {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--accent2);
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    h2 {
-      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-      font-weight: 700;
-      margin-bottom: 12px;
-      letter-spacing: -.02em;
-    }
-    .section-sub {
-      color: var(--muted);
-      font-size: .95rem;
-      max-width: 560px;
-      margin-bottom: 40px;
-      font-weight: 300;
-    }
+    section { position: relative; z-index: 2; max-width: 1000px; margin: 0 auto; padding: 0 24px 80px; }
+    .section-tag { font-family: var(--mono); font-size: 11px; color: var(--accent2); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 10px; }
+    h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; margin-bottom: 12px; letter-spacing: -.02em; }
+    .section-sub { color: var(--muted); font-size: .95rem; max-width: 560px; margin-bottom: 40px; font-weight: 300; }
 
-    /* ── TOOLS GRID ── */
-    .tools-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .tool-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 26px;
-      text-decoration: none;
-      color: var(--text);
-      transition: border-color .2s, transform .2s, box-shadow .2s;
-      display: block;
-    }
-    .tool-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-4px);
-      box-shadow: var(--glow);
-    }
-    .tool-icon {
-      width: 46px; height: 46px;
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.4rem;
-      margin-bottom: 16px;
-    }
+    .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .tool-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 26px; text-decoration: none; color: var(--text); transition: border-color .2s, transform .2s, box-shadow .2s; display: block; }
+    .tool-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: var(--glow); }
+    .tool-icon { width: 46px; height: 46px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 16px; }
     .tool-icon.blue { background: rgba(56,189,248,.12); border: 1px solid rgba(56,189,248,.25); }
     .tool-icon.purple { background: rgba(129,140,248,.12); border: 1px solid rgba(129,140,248,.25); }
     .tool-icon.orange { background: rgba(251,146,60,.12); border: 1px solid rgba(251,146,60,.25); }
     .tool-icon.green { background: rgba(52,211,153,.12); border: 1px solid rgba(52,211,153,.25); }
     .tool-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
     .tool-card p { font-size: .83rem; color: var(--muted); line-height: 1.6; margin-bottom: 14px; }
-    .tool-tag {
-      display: inline-block;
-      font-family: var(--mono);
-      font-size: 10px;
-      padding: 3px 10px;
-      border-radius: 20px;
-      letter-spacing: .06em;
-    }
+    .tool-tag { display: inline-block; font-family: var(--mono); font-size: 10px; padding: 3px 10px; border-radius: 20px; letter-spacing: .06em; }
     .tool-tag.blue { background: rgba(56,189,248,.1); color: var(--accent); border: 1px solid rgba(56,189,248,.2); }
     .tool-tag.purple { background: rgba(129,140,248,.1); color: var(--accent2); border: 1px solid rgba(129,140,248,.2); }
     .tool-tag.orange { background: rgba(251,146,60,.1); color: var(--orange); border: 1px solid rgba(251,146,60,.2); }
     .tool-tag.green { background: rgba(52,211,153,.1); color: var(--green); border: 1px solid rgba(52,211,153,.2); }
 
-    /* ── MID AD ── */
-    .ad-mid-wrap {
-      position: relative;
-      z-index: 2;
-      max-width: 1000px;
-      margin: 0 auto 60px;
-      padding: 0 24px;
-    }
-    .ad-mid-slot {
-      min-height: 250px;
-      background: var(--surface);
-      border: 1px dashed var(--border);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-    .ad-inner {
-      width: 728px;
-      max-width: 95%;
-      height: 90px;
-      background: repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px);
-      border: 1px dashed var(--border);
-      border-radius: 6px;
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--mono); font-size: 11px; color: var(--muted);
-    }
+    .ad-mid-wrap { position: relative; z-index: 2; max-width: 1000px; margin: 0 auto 60px; padding: 0 24px; }
+    .ad-mid-slot { min-height: 250px; background: var(--surface); border: 1px dashed var(--border); border-radius: 10px; display: flex; align-items: center; justify-content: center; position: relative; }
+    .ad-inner { width: 728px; max-width: 95%; height: 90px; background: repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px); border: 1px dashed var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; color: var(--muted); }
 
-    /* ── MISSION ── */
-    .mission-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
+    .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     @media (max-width: 640px) { .mission-grid { grid-template-columns: 1fr; } }
-    .mission-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 28px;
-    }
-    .mission-card.featured {
-      border-color: rgba(56,189,248,.3);
-      box-shadow: var(--glow);
-      grid-column: span 2;
-    }
+    .mission-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; }
+    .mission-card.featured { border-color: rgba(56,189,248,.3); box-shadow: var(--glow); grid-column: span 2; }
     @media (max-width: 640px) { .mission-card.featured { grid-column: span 1; } }
     .mission-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; }
     .mission-card p { font-size: .85rem; color: var(--muted); line-height: 1.7; }
 
-    /* ── HOW IT WORKS ── */
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-    .step-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 24px;
-      position: relative;
-      overflow: hidden;
-    }
-    .step-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-    }
-    .step-num {
-      font-family: var(--mono);
-      font-size: 2rem;
-      font-weight: 700;
-      color: rgba(56,189,248,.15);
-      line-height: 1;
-      margin-bottom: 12px;
-    }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .step-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; position: relative; overflow: hidden; }
+    .step-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+    .step-num { font-family: var(--mono); font-size: 2rem; font-weight: 700; color: rgba(56,189,248,.15); line-height: 1; margin-bottom: 12px; }
     .step-card h3 { font-size: .95rem; font-weight: 700; margin-bottom: 8px; }
     .step-card p { font-size: .82rem; color: var(--muted); line-height: 1.6; }
 
-    /* ── FAQ ── */
     .faq { display: grid; gap: 10px; }
-    details {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-      transition: border-color .2s;
-    }
+    details { background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: border-color .2s; }
     details[open] { border-color: rgba(56,189,248,.35); }
-    summary {
-      padding: 18px 22px;
-      font-size: .93rem;
-      font-weight: 600;
-      cursor: pointer;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      user-select: none;
-    }
+    summary { padding: 18px 22px; font-size: .93rem; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; user-select: none; }
     summary::-webkit-details-marker { display: none; }
-    summary::after {
-      content: '+';
-      font-size: 1.3rem;
-      color: var(--accent);
-      transition: transform .2s;
-      flex-shrink: 0;
-    }
+    summary::after { content: '+'; font-size: 1.3rem; color: var(--accent); transition: transform .2s; flex-shrink: 0; }
     details[open] summary::after { transform: rotate(45deg); }
-    .faq-body {
-      padding: 0 22px 18px;
-      font-size: .85rem;
-      color: var(--muted);
-      line-height: 1.75;
-    }
+    .faq-body { padding: 0 22px 18px; font-size: .85rem; color: var(--muted); line-height: 1.75; }
 
-    /* ── CTA BANNER ── */
-    .cta-banner {
-      position: relative;
-      z-index: 2;
-      max-width: 1000px;
-      margin: 0 auto 80px;
-      padding: 0 24px;
-    }
-    .cta-inner {
-      background: linear-gradient(135deg, #0d1f3a, #111d2e);
-      border: 1px solid rgba(56,189,248,.3);
-      border-radius: 16px;
-      padding: 50px 40px;
-      text-align: center;
-      box-shadow: var(--glow);
-    }
+    .cta-banner { position: relative; z-index: 2; max-width: 1000px; margin: 0 auto 80px; padding: 0 24px; }
+    .cta-inner { background: linear-gradient(135deg, #0d1f3a, #111d2e); border: 1px solid rgba(56,189,248,.3); border-radius: 16px; padding: 50px 40px; text-align: center; box-shadow: var(--glow); }
     .cta-inner h2 { margin-bottom: 12px; }
     .cta-inner p { color: var(--muted); margin-bottom: 28px; font-size: .95rem; }
 
-    /* ── FOOTER ── */
-    footer {
-      position: relative;
-      z-index: 2;
-      border-top: 1px solid var(--border);
-      background: var(--surface);
-      padding: 40px 24px 28px;
-    }
-    .footer-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 30px;
-      align-items: start;
-    }
+    footer { position: relative; z-index: 2; border-top: 1px solid var(--border); background: var(--surface); padding: 40px 24px 28px; }
+    .footer-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 30px; align-items: start; }
     @media (max-width: 580px) { .footer-inner { grid-template-columns: 1fr; } }
-    .footer-brand p {
-      font-size: .82rem;
-      color: var(--muted);
-      margin-top: 8px;
-      max-width: 360px;
-      line-height: 1.65;
-    }
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: flex-end;
-    }
+    .footer-brand p { font-size: .82rem; color: var(--muted); margin-top: 8px; max-width: 360px; line-height: 1.65; }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
     @media (max-width: 580px) { .footer-links { align-items: flex-start; flex-direction: row; flex-wrap: wrap; } }
-    .footer-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: .82rem;
-      transition: color .2s;
-    }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: .82rem; transition: color .2s; }
     .footer-links a:hover { color: var(--accent); }
-    .footer-bottom {
-      max-width: 1000px;
-      margin: 28px auto 0;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
-      font-size: .75rem;
-      color: var(--muted);
-      font-family: var(--mono);
-      text-align: center;
-    }
+    .footer-bottom { max-width: 1000px; margin: 28px auto 0; padding-top: 20px; border-top: 1px solid var(--border); font-size: .75rem; color: var(--muted); font-family: var(--mono); text-align: center; }
 
-    /* ── STICKY AD ── */
-    .ad-sticky {
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      background: rgba(13,19,33,.95);
-      backdrop-filter: blur(10px);
-      border-top: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 8px 16px;
-      z-index: 200;
-      gap: 14px;
-    }
-    .ad-sticky-slot {
-      width: 728px;
-      max-width: 80%;
-      height: 60px;
-      background: repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px);
-      border: 1px dashed var(--border);
-      border-radius: 4px;
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--mono); font-size: 11px; color: var(--muted);
-    }
-    .close-sticky {
-      background: none;
-      border: 1px solid var(--border);
-      color: var(--muted);
-      width: 28px; height: 28px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 15px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-      transition: border-color .2s, color .2s;
-    }
+    .ad-sticky { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(13,19,33,.95); backdrop-filter: blur(10px); border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: center; padding: 8px 16px; z-index: 200; gap: 14px; }
+    .ad-sticky-slot { width: 728px; max-width: 80%; height: 60px; background: repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px); border: 1px dashed var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; color: var(--muted); }
+    .close-sticky { background: none; border: 1px solid var(--border); color: var(--muted); width: 28px; height: 28px; border-radius: 50%; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: border-color .2s, color .2s; }
     .close-sticky:hover { border-color: var(--accent); color: var(--accent); }
 
-    body { padding-bottom: 80px; }
-
-    /* Mobile nav */
-    @media (max-width: 580px) {
-      .nav-links { display: none; }
-    }
+    @media (max-width: 580px) { .nav-links { display: none; } }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
-    <a href="https://susan-khatri.com.np/" class="nav-logo">
+    <a href="index.html" class="nav-logo">
       <div class="nav-dot"></div>
       Susan<span>Khatri</span>
     </a>
     <ul class="nav-links">
-      <li><a href="https://susan-khatri.com.np/">Home</a></li>
-      <li><a href="https://susan-khatri.com.np/java21">Java 21</a></li>
-      <li><a href="https://susan-khatri.com.np/about">About</a></li>
-      <li><a href="https://susan-khatri.com.np/contact">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="java21-download (1).html">Java 21</a></li>
+      <li><a href="python.html">Python</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- TOP AD (728×90) -->
   <div class="ad-banner">
     <span class="ad-label">Advertisement</span>
-    <div class="ad-slot" id="ad-top">
-      <!-- PASTE YOUR AD CODE HERE -->
-      728 × 90 — Leaderboard Ad
-    </div>
+    <div class="ad-slot" id="ad-top">728 × 90 — Leaderboard Ad</div>
   </div>
 
-  <!-- HERO -->
   <div class="hero">
-    <div class="hero-badge">
-      <span>⚡</span> Free Tools · No Admin Rights · School Ready
-    </div>
+    <div class="hero-badge"><span>⚡</span> Free Tools · No Admin Rights · School Ready</div>
     <h1>Your <span class="highlight">Coding Tools Hub</span><br/>Built for School Computers</h1>
     <p class="hero-sub">Locked out of installing software at school? This site gives you portable versions of Java, Python, and more — just download, extract, and start coding.</p>
     <div class="hero-ctas">
-      <a href="https://susan-khatri.com.np/java21" class="btn-primary">
-        ☕ Download Java 21
-      </a>
-      <a href="#tools" class="btn-secondary">
-        Browse All Tools →
-      </a>
+      <a href="java21-download (1).html" class="btn-primary">☕ Download Java 21</a>
+      <a href="#tools" class="btn-secondary">Browse All Tools →</a>
     </div>
   </div>
 
-  <!-- STATS -->
   <div class="stats">
-    <div class="stat">
-      <span class="stat-val">100%</span>
-      <span class="stat-lbl">Free Forever</span>
-    </div>
-    <div class="stat">
-      <span class="stat-val">0</span>
-      <span class="stat-lbl">Admin Rights Needed</span>
-    </div>
-    <div class="stat">
-      <span class="stat-val">ZIP</span>
-      <span class="stat-lbl">Just Extract & Run</span>
-    </div>
-    <div class="stat">
-      <span class="stat-val">LTS</span>
-      <span class="stat-lbl">Official Stable Builds</span>
-    </div>
+    <div class="stat"><span class="stat-val">100%</span><span class="stat-lbl">Free Forever</span></div>
+    <div class="stat"><span class="stat-val">0</span><span class="stat-lbl">Admin Rights Needed</span></div>
+    <div class="stat"><span class="stat-val">ZIP</span><span class="stat-lbl">Just Extract & Run</span></div>
+    <div class="stat"><span class="stat-val">LTS</span><span class="stat-lbl">Official Stable Builds</span></div>
   </div>
 
-  <!-- TOOLS SECTION -->
   <section id="tools">
     <div class="section-tag">// Available Tools</div>
     <h2>Portable Software for Students</h2>
     <p class="section-sub">Every tool here works without installation. Download the ZIP, extract it, and you are ready to code.</p>
     <div class="tools-grid">
-      <a href="https://susan-khatri.com.np/java21" class="tool-card">
+      <a href="java21-download (1).html" class="tool-card">
         <div class="tool-icon blue">☕</div>
         <h3>Java 21 JDK – Portable ZIP</h3>
-        <p>The official Java 21 Long-Term Support release as a portable ZIP. No installer, no admin rights. Compile and run Java programs on any school computer.</p>
+        <p>The official Java 21 LTS release as a portable ZIP. No installer, no admin rights. Compile and run Java programs on any school computer.</p>
         <span class="tool-tag blue">Available Now</span>
       </a>
-      <div class="tool-card" style="opacity:.6; cursor:default;">
+      <a href="python.html" class="tool-card">
         <div class="tool-icon purple">🐍</div>
         <h3>Python 3 – Portable ZIP</h3>
         <p>Run Python scripts without installing anything. Perfect for data science homework, automation, and beginner projects on restricted school machines.</p>
-        <span class="tool-tag purple">Coming Soon</span>
-      </div>
-      <div class="tool-card" style="opacity:.6; cursor:default;">
+        <span class="tool-tag purple">Available Now</span>
+      </a>
+      <a href="vscode.html" class="tool-card">
         <div class="tool-icon orange">📝</div>
         <h3>VS Code – Portable Edition</h3>
         <p>The world's most popular code editor in portable form. Just extract and launch — no installation, no admin privileges required.</p>
-        <span class="tool-tag orange">Coming Soon</span>
-      </div>
-      <div class="tool-card" style="opacity:.6; cursor:default;">
+        <span class="tool-tag orange">Available Now</span>
+      </a>
+      <a href="tools.html" class="tool-card">
         <div class="tool-icon green">⚙️</div>
-        <h3>Git – Portable</h3>
-        <p>Use Git for version control on school computers. Clone repositories, commit your work, and collaborate on projects without admin rights.</p>
-        <span class="tool-tag green">Coming Soon</span>
-      </div>
+        <h3>More Tools</h3>
+        <p>Compare portable coding tools for students. Git, Notepad++, and more — all without installation or admin rights.</p>
+        <span class="tool-tag green">View Tools</span>
+      </a>
     </div>
   </section>
 
-  <!-- MID AD -->
-  <div class="ad-mid-wrap">
-    <div class="ad-mid-slot">
-      <span class="ad-label">Advertisement</span>
-      <div class="ad-inner" id="ad-mid">
-        <!-- PASTE YOUR AD CODE HERE -->
-        728 × 90 — Mid Page Ad
-      </div>
-    </div>
-  </div>
-
-  <!-- MISSION -->
-  <section id="mission">
-    <div class="section-tag">// Our Mission</div>
-    <h2>Why This Site Exists</h2>
-    <p class="section-sub">Every student deserves access to the same coding tools, regardless of their school's IT restrictions.</p>
-    <div class="mission-grid">
-      <div class="mission-card featured">
-        <h3>🎯 The Problem We Solve</h3>
-        <p>Thousands of students sit down at school computers ready to learn coding — only to find they cannot install Java, Python, or any development tool because the computer requires admin rights. IT departments lock down school machines for good reasons, but it should not stop students from learning. This site was created to bridge that gap. Every tool here runs directly from a ZIP file, no installation needed, no admin password required, no requests to the IT office.</p>
-      </div>
-      <div class="mission-card">
-        <h3>✅ Official & Safe</h3>
-        <p>Every download linked here comes directly from the official source — Oracle, Python.org, or the official project website. No modified files, no third-party repacks, no hidden software. What you download is exactly what the developers released.</p>
-      </div>
-      <div class="mission-card">
-        <h3>📚 Built for Beginners</h3>
-        <p>Every guide on this site is written in plain language. No confusing jargon, no assumed knowledge. If you have never used a command line before, the step-by-step instructions will walk you through everything.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
   <section id="how">
     <div class="section-tag">// How It Works</div>
     <h2>Three Steps to Start Coding</h2>
-    <p class="section-sub">Getting Java or Python running on a locked school computer is easier than you think.</p>
     <div class="steps">
-      <div class="step-card">
-        <div class="step-num">01</div>
-        <h3>Download the ZIP</h3>
-        <p>Click the download button on any tool page. The file goes to your Downloads folder — no special permissions needed to download files.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">02</div>
-        <h3>Extract It</h3>
-        <p>Right-click the ZIP file and choose Extract All. Put it anywhere you have access — your Documents folder, Desktop, or a USB drive.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">03</div>
-        <h3>Run & Code</h3>
-        <p>Open Command Prompt, point it to the extracted folder, and you are ready. The full guide on each page explains exactly what to type.</p>
-      </div>
+      <div class="step-card"><div class="step-num">01</div><h3>Download ZIP</h3><p>Files go to your Downloads folder — no special permissions needed.</p></div>
+      <div class="step-card"><div class="step-num">02</div><h3>Extract It</h3><p>Right-click and "Extract All" to your Documents or a USB drive.</p></div>
+      <div class="step-card"><div class="step-num">03</div><h3>Run & Code</h3><p>Open Command Prompt and follow our easy guide to start coding.</p></div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="section-tag">// FAQ</div>
-    <h2>Frequently Asked Questions</h2>
-    <p class="section-sub">Quick answers to the most common questions students ask.</p>
-    <div class="faq">
-      <details>
-        <summary>Is it allowed to use portable software at school?</summary>
-        <div class="faq-body">In most schools, running software from your personal user space is not prohibited — the restrictions are about installing software system-wide. Portable ZIP files do not install anything and do not require admin rights. That said, every school has its own IT policy, so it is worth checking yours if you are unsure.</div>
-      </details>
-      <details>
-        <summary>Will this work on any Windows school computer?</summary>
-        <div class="faq-body">Yes. As long as you can download files and open Command Prompt, the portable tools on this site will work. They have been tested on standard locked-down Windows 10 and Windows 11 school environments.</div>
-      </details>
-      <details>
-        <summary>Can I put these tools on a USB drive?</summary>
-        <div class="faq-body">Absolutely. That is one of the best ways to use portable software. Extract the ZIP to a USB drive, carry it with you, and use it on any school computer without downloading anything again.</div>
-      </details>
-      <details>
-        <summary>Are the downloads safe and official?</summary>
-        <div class="faq-body">Yes. This site only links to the official download pages of each tool — Oracle for Java, Python.org for Python, and so on. The files are not modified in any way. You are downloading the exact same file you would get from the official website.</div>
-      </details>
-      <details>
-        <summary>What if something does not work?</summary>
-        <div class="faq-body">Each tool page includes a detailed troubleshooting section. If you still have trouble, you can reach out through the Contact page and we will try to help.</div>
-      </details>
-    </div>
-  </section>
-
-  <!-- CTA -->
   <div class="cta-banner">
     <div class="cta-inner">
       <h2>Ready to Start Coding?</h2>
       <p>Download Java 21 right now and have it running on your school computer in under five minutes.</p>
-      <a href="https://susan-khatri.com.np/java21" class="btn-primary">
-        ☕ Get Java 21 – Free ZIP Download
-      </a>
+      <a href="java21-download (1).html" class="btn-primary">☕ Get Java 21 – Free ZIP Download</a>
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <a href="https://susan-khatri.com.np/" class="nav-logo" style="text-decoration:none;">
-          <div class="nav-dot"></div>
-          Susan<span style="color:var(--accent)">Khatri</span>
+        <a href="index.html" class="nav-logo" style="text-decoration:none;">
+          <div class="nav-dot"></div> Susan<span>Khatri</span>
         </a>
-        <p>Helping students run coding tools on school computers — no admin rights, no hassle. All downloads are free and link to official sources.</p>
+        <p>Helping students run coding tools on school computers — no admin rights, no hassle.</p>
       </div>
       <div class="footer-links">
-        <a href="https://susan-khatri.com.np/">Home</a>
-        <a href="https://susan-khatri.com.np/java21">Java 21</a>
-        <a href="https://susan-khatri.com.np/about">About</a>
-        <a href="https://susan-khatri.com.np/contact">Contact</a>
-        <a href="https://susan-khatri.com.np/privacy">Privacy Policy</a>
+        <a href="index.html">Home</a>
+        <a href="java21-download (1).html">Java 21</a>
+        <a href="python.html">Python</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      © 2025 susan-khatri.com.np &nbsp;·&nbsp; All downloads link to official sources &nbsp;·&nbsp; For educational use
-    </div>
+    <div class="footer-bottom">© 2025 susan-khatri.com.np · For educational use</div>
   </footer>
 
-  <!-- STICKY BOTTOM AD (728×60) -->
   <div class="ad-sticky" id="sticky-ad">
-    <span class="ad-label" style="position:static; font-family:var(--mono); font-size:9px; color:var(--muted); letter-spacing:.1em; text-transform:uppercase; white-space:nowrap;">Ad</span>
-    <div class="ad-sticky-slot" id="ad-bottom">
-      <!-- PASTE YOUR AD CODE HERE -->
-      728 × 60 — Sticky Footer Ad
-    </div>
-    <button class="close-sticky" onclick="document.getElementById('sticky-ad').style.display='none'" title="Close">×</button>
+    <span class="ad-label" style="font-family:var(--mono); font-size:9px; color:var(--muted); letter-spacing:.1em; text-transform:uppercase;">Ad</span>
+    <div class="ad-sticky-slot" id="ad-bottom">728 × 60 — Sticky Footer Ad</div>
+    <button class="close-sticky" onclick="document.getElementById('sticky-ad').style.display='none'">×</button>
   </div>
 
 </body>
