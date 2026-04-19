@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- SEO -->
+  <title>Privacy Policy – Susan Khatri Tools Hub</title>
+  <meta name="description" content="Privacy Policy for susan-khatri.com.np. Learn how we collect, use, and protect your data, including information about Google AdSense, analytics, and cookies."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://susan-khatri.com.np/privacy"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://susan-khatri.com.np/privacy"/>
+  <meta property="og:title" content="Privacy Policy – Susan Khatri Tools Hub"/>
+  <meta property="og:description" content="Read our Privacy Policy to understand how we handle your data on susan-khatri.com.np."/>
+  <meta property="og:site_name" content="Susan Khatri Tools Hub"/>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy Policy",
+    "url": "https://susan-khatri.com.np/privacy",
+    "description": "Privacy Policy for Susan Khatri Tools Hub, covering Google AdSense, analytics, cookies, and user data.",
+    "publisher": {
+      "@type": "Person",
+      "name": "Susan Khatri",
+      "url": "https://susan-khatri.com.np"
+    }
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --bg: #060910;
+      --surface: #0d1321;
+      --card: #111d2e;
+      --border: #1e3050;
+      --accent: #38bdf8;
+      --accent2: #818cf8;
+      --text: #e0eaf8;
+      --muted: #6b87a8;
+      --mono: 'DM Mono', monospace;
+      --sans: 'Outfit', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.75;
+      overflow-x: hidden;
+      padding-bottom: 80px;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image:
+        linear-gradient(rgba(56,189,248,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56,189,248,.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none; z-index: 0;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(6,9,16,.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px; height: 60px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-weight: 700; font-size: 1rem;
+      color: var(--text); text-decoration: none;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--accent); box-shadow: 0 0 8px var(--accent);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: .88rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--accent); }
+    @media(max-width:580px){ .nav-links { display: none; } }
+
+    /* AD BANNER */
+    .ad-banner {
+      width: 100%; min-height: 90px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      position: relative; z-index: 10;
+    }
+    .ad-label {
+      font-family: var(--mono); font-size: 9px; color: var(--muted);
+      position: absolute; top: 6px; left: 12px;
+      letter-spacing: .1em; text-transform: uppercase;
+    }
+    .ad-slot {
+      width: 728px; max-width: 95%; height: 90px;
+      background: repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px);
+      border: 1px dashed var(--border); border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-size: 11px; color: var(--muted);
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      position: relative; z-index: 2;
+      padding: 60px 24px 40px; text-align: center;
+      max-width: 700px; margin: 0 auto;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(129,140,248,.1);
+      border: 1px solid rgba(129,140,248,.3);
+      color: var(--accent2);
+      font-family: var(--mono); font-size: 11px;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: 5px 16px; border-radius: 20px; margin-bottom: 20px;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800; letter-spacing: -.02em; margin-bottom: 12px;
+    }
+    .page-sub {
+      color: var(--muted); font-size: .92rem; font-weight: 300;
+    }
+    .last-updated {
+      display: inline-block; margin-top: 14px;
+      font-family: var(--mono); font-size: 11px;
+      color: var(--muted); letter-spacing: .06em;
+    }
+
+    /* MAIN CONTENT */
+    .content-wrap {
+      position: relative; z-index: 2;
+      max-width: 780px; margin: 0 auto;
+      padding: 0 24px 60px;
+      display: grid; gap: 20px;
+    }
+
+    /* POLICY CARD */
+    .policy-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 30px 32px;
+      transition: border-color .2s;
+    }
+    .policy-card:hover { border-color: rgba(56,189,248,.25); }
+
+    .section-num {
+      font-family: var(--mono); font-size: 10px;
+      color: var(--accent); letter-spacing: .12em;
+      text-transform: uppercase; margin-bottom: 8px;
+    }
+    h2 {
+      font-size: 1.15rem; font-weight: 700;
+      margin-bottom: 14px; letter-spacing: -.01em;
+    }
+    p {
+      font-size: .88rem; color: var(--muted);
+      line-height: 1.8; margin-bottom: 12px;
+    }
+    p:last-child { margin-bottom: 0; }
+    ul {
+      list-style: none; display: grid; gap: 8px;
+      margin: 10px 0;
+    }
+    ul li {
+      font-size: .87rem; color: var(--muted);
+      padding-left: 20px; position: relative; line-height: 1.7;
+    }
+    ul li::before {
+      content: '→';
+      position: absolute; left: 0;
+      color: var(--accent); font-size: .8rem;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .highlight-box {
+      background: rgba(56,189,248,.07);
+      border: 1px solid rgba(56,189,248,.2);
+      border-radius: 8px; padding: 16px 18px;
+      margin: 14px 0;
+      font-size: .85rem; color: var(--text); line-height: 1.75;
+    }
+
+    /* MID AD */
+    .ad-mid {
+      position: relative; z-index: 2;
+      max-width: 780px; margin: 0 auto 20px;
+      padding: 0 24px;
+    }
+    .ad-mid-inner {
+      min-height: 100px;
+      background: var(--surface);
+      border: 1px dashed var(--border); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .ad-mid-slot {
+      width: 728px; max-width: 95%; height: 90px;
+      background: repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px);
+      border: 1px dashed var(--border); border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-size: 11px; color: var(--muted);
+    }
+
+    /* FOOTER */
+    footer {
+      position: relative; z-index: 2;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      padding: 36px 24px 24px;
+    }
+    .footer-inner {
+      max-width: 780px; margin: 0 auto;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 16px;
+    }
+    .footer-brand { font-size: .82rem; color: var(--muted); }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: .82rem; transition: color .2s; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-bottom {
+      max-width: 780px; margin: 20px auto 0;
+      padding-top: 16px; border-top: 1px solid var(--border);
+      font-size: .75rem; color: var(--muted);
+      font-family: var(--mono); text-align: center;
+    }
+
+    /* STICKY AD */
+    .ad-sticky {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: rgba(13,19,33,.95); backdrop-filter: blur(10px);
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      padding: 8px 16px; z-index: 200; gap: 14px;
+    }
+    .ad-sticky-lbl { font-family: var(--mono); font-size: 9px; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+    .ad-sticky-slot {
+      width: 728px; max-width: 80%; height: 60px;
+      background: repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px);
+      border: 1px dashed var(--border); border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-size: 11px; color: var(--muted);
+    }
+    .close-sticky {
+      background: none; border: 1px solid var(--border); color: var(--muted);
+      width: 28px; height: 28px; border-radius: 50%; cursor: pointer;
+      font-size: 15px; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; transition: border-color .2s, color .2s;
+    }
+    .close-sticky:hover { border-color: var(--accent); color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="https://susan-khatri.com.np/" class="nav-logo">
+      <div class="nav-dot"></div>Susan<span>Khatri</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="https://susan-khatri.com.np/">Home</a></li>
+      <li><a href="https://susan-khatri.com.np/java21">Java 21</a></li>
+      <li><a href="https://susan-khatri.com.np/about">About</a></li>
+      <li><a href="https://susan-khatri.com.np/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- TOP AD -->
+  <div class="ad-banner">
+    <span class="ad-label">Advertisement</span>
+    <div class="ad-slot" id="ad-top"><!-- PASTE AD CODE HERE --> 728 × 90 — Leaderboard Ad</div>
+  </div>
+
+  <div class="page-header">
+    <div class="badge">Legal · Transparency · Your Rights</div>
+    <h1>Privacy Policy</h1>
+    <p class="page-sub">How we collect, use, and protect your information on this website.</p>
+    <span class="last-updated">Last updated: January 1, 2025</span>
+  </div>
+
+  <div class="content-wrap">
+
+    <!-- 1. INTRODUCTION -->
+    <div class="policy-card">
+      <div class="section-num">// 01</div>
+      <h2>Introduction</h2>
+      <p>Welcome to Susan Khatri Tools Hub, accessible at <a href="https://susan-khatri.com.np/">susan-khatri.com.np</a>. This Privacy Policy explains what information we collect when you visit our website, how we use it, and what rights you have regarding your personal data.</p>
+      <p>By using this website, you agree to the practices described in this policy. If you do not agree, please discontinue use of the site.</p>
+      <div class="highlight-box">
+        This website is operated by Susan Khatri, based in Nepal. If you have any questions about this Privacy Policy, you can contact us at the email listed on our <a href="https://susan-khatri.com.np/contact">Contact page</a>.
+      </div>
+    </div>
+
+    <!-- 2. INFORMATION WE COLLECT -->
+    <div class="policy-card">
+      <div class="section-num">// 02</div>
+      <h2>Information We Collect</h2>
+      <p>We collect two types of information: information you provide directly, and information collected automatically when you browse the site.</p>
+      <p><strong style="color:var(--text)">Information you provide:</strong></p>
+      <ul>
+        <li>Your name and email address if you submit our contact form</li>
+        <li>Any message or content you send through the contact form</li>
+      </ul>
+      <p style="margin-top:14px;"><strong style="color:var(--text)">Information collected automatically:</strong></p>
+      <ul>
+        <li>Your IP address and approximate geographic location</li>
+        <li>Browser type, operating system, and device information</li>
+        <li>Pages you visit and how long you spend on each page</li>
+        <li>The website that referred you to ours</li>
+        <li>Clicks on download links and buttons</li>
+      </ul>
+    </div>
+
+    <!-- 3. COOKIES -->
+    <div class="policy-card">
+      <div class="section-num">// 03</div>
+      <h2>Cookies</h2>
+      <p>Cookies are small text files stored on your device by your browser. This website uses cookies for the following purposes:</p>
+      <ul>
+        <li><strong style="color:var(--text)">Essential cookies</strong> — required for the site to function correctly</li>
+        <li><strong style="color:var(--text)">Analytics cookies</strong> — used by Google Analytics to understand how visitors use the site</li>
+        <li><strong style="color:var(--text)">Advertising cookies</strong> — used by Google AdSense to show relevant advertisements</li>
+      </ul>
+      <p style="margin-top:12px;">You can control or disable cookies through your browser settings. Note that disabling cookies may affect some functionality. Most browsers allow you to refuse new cookies, delete existing cookies, and be warned when a new cookie is set.</p>
+    </div>
+
+    <!-- 4. GOOGLE ADSENSE -->
+    <div class="policy-card">
+      <div class="section-num">// 04</div>
+      <h2>Google AdSense & Advertising</h2>
+      <p>This website uses Google AdSense to display advertisements. Google AdSense is an advertising service provided by Google LLC.</p>
+      <p>Google uses cookies and similar tracking technologies to serve ads based on your prior visits to this website and other sites across the internet. This is known as interest-based advertising.</p>
+      <ul>
+        <li>Google may use the DoubleClick cookie to serve ads on this site</li>
+        <li>Third-party vendors, including Google, use cookies to serve ads based on your visit to this site</li>
+        <li>You can opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google's Ad Settings</a></li>
+        <li>You can also opt out via the <a href="https://www.aboutads.info" target="_blank" rel="noopener">Network Advertising Initiative opt-out page</a></li>
+      </ul>
+      <div class="highlight-box">
+        We do not control the advertisements shown by Google AdSense. Google's use of advertising cookies enables it and its partners to serve ads based on your visit to this and other websites. For more information, see <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google's advertising privacy policy</a>.
+      </div>
+    </div>
+
+    <!-- 5. GOOGLE ANALYTICS -->
+    <div class="policy-card">
+      <div class="section-num">// 05</div>
+      <h2>Google Analytics</h2>
+      <p>We use Google Analytics to understand how visitors interact with our website. Google Analytics collects information such as how often users visit the site, what pages they visit, and what other sites they used prior to coming to this site.</p>
+      <p>Google Analytics collects only the IP address assigned to you on the date you visit this site, rather than your name or other identifying information. We do not combine the information collected through Google Analytics with personally identifiable information.</p>
+      <ul>
+        <li>Data collected is used solely to improve the website's content and user experience</li>
+        <li>Google Analytics data is retained for 26 months by default</li>
+        <li>You can prevent Google Analytics tracking by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out browser add-on</a></li>
+      </ul>
+    </div>
+
+    <!-- MID AD -->
+    <div class="ad-mid" style="padding:0; max-width:100%;">
+      <div class="ad-mid-inner">
+        <span class="ad-label">Advertisement</span>
+        <div class="ad-mid-slot" id="ad-mid"><!-- PASTE AD CODE HERE --> 728 × 90 — Mid Page Ad</div>
+      </div>
+    </div>
+
+    <!-- 6. HOW WE USE YOUR INFO -->
+    <div class="policy-card">
+      <div class="section-num">// 06</div>
+      <h2>How We Use Your Information</h2>
+      <p>The information we collect is used for the following purposes:</p>
+      <ul>
+        <li>To operate and improve the website and its content</li>
+        <li>To respond to contact form submissions and answer your questions</li>
+        <li>To understand which tools and guides are most useful to visitors</li>
+        <li>To serve relevant advertisements through Google AdSense</li>
+        <li>To monitor website performance and fix technical issues</li>
+        <li>To comply with legal obligations if required</li>
+      </ul>
+      <p style="margin-top:12px;">We do not sell your personal information to any third party. We do not use your information for any purpose other than those listed above.</p>
+    </div>
+
+    <!-- 7. THIRD PARTY LINKS -->
+    <div class="policy-card">
+      <div class="section-num">// 07</div>
+      <h2>Third-Party Links & Downloads</h2>
+      <p>This website contains links to third-party websites, including official download pages for Java (Oracle), Python (Python.org), and other software providers. When you click these links, you leave our website and are subject to the privacy policies of those third-party sites.</p>
+      <p>We are not responsible for the privacy practices of third-party websites and encourage you to read their privacy policies before downloading any software or submitting any personal information.</p>
+    </div>
+
+    <!-- 8. DATA RETENTION -->
+    <div class="policy-card">
+      <div class="section-num">// 08</div>
+      <h2>Data Retention</h2>
+      <p>We retain personal data only for as long as necessary to fulfil the purposes described in this policy:</p>
+      <ul>
+        <li>Contact form submissions are kept for up to 12 months and then deleted</li>
+        <li>Analytics data is retained according to Google Analytics' default retention period (26 months)</li>
+        <li>Advertising data is managed by Google according to their own retention policies</li>
+      </ul>
+    </div>
+
+    <!-- 9. YOUR RIGHTS -->
+    <div class="policy-card">
+      <div class="section-num">// 09</div>
+      <h2>Your Rights</h2>
+      <p>Depending on where you are located, you may have the following rights regarding your personal data:</p>
+      <ul>
+        <li><strong style="color:var(--text)">Right to access</strong> — request a copy of the personal data we hold about you</li>
+        <li><strong style="color:var(--text)">Right to correction</strong> — request that inaccurate data be corrected</li>
+        <li><strong style="color:var(--text)">Right to deletion</strong> — request that your personal data be deleted</li>
+        <li><strong style="color:var(--text)">Right to object</strong> — object to the processing of your data for certain purposes</li>
+        <li><strong style="color:var(--text)">Right to opt out of ads</strong> — opt out of personalized advertising via Google's Ad Settings</li>
+      </ul>
+      <p style="margin-top:12px;">To exercise any of these rights, please contact us through our <a href="https://susan-khatri.com.np/contact">Contact page</a>. We will respond within 30 days.</p>
+    </div>
+
+    <!-- 10. CHILDREN -->
+    <div class="policy-card">
+      <div class="section-num">// 10</div>
+      <h2>Children's Privacy</h2>
+      <p>This website is intended for general audiences including students. We do not knowingly collect personal information from children under the age of 13. If you are a parent or guardian and believe your child has submitted personal information through our contact form, please contact us and we will promptly delete that information.</p>
+    </div>
+
+    <!-- 11. CHANGES -->
+    <div class="policy-card">
+      <div class="section-num">// 11</div>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, operational, or regulatory reasons. When we make changes, we will update the "Last updated" date at the top of this page.</p>
+      <p>We encourage you to review this page periodically to stay informed about how we protect your information.</p>
+    </div>
+
+    <!-- 12. CONTACT -->
+    <div class="policy-card" style="border-color:rgba(56,189,248,.3);">
+      <div class="section-num">// 12</div>
+      <h2>Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please reach out through our contact page:</p>
+      <div class="highlight-box">
+        📬 <strong style="color:var(--text)">Susan Khatri</strong><br/>
+        Website: <a href="https://susan-khatri.com.np/">susan-khatri.com.np</a><br/>
+        Contact: <a href="https://susan-khatri.com.np/contact">susan-khatri.com.np/contact</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">© 2025 susan-khatri.com.np · All rights reserved</div>
+      <div class="footer-links">
+        <a href="https://susan-khatri.com.np/">Home</a>
+        <a href="https://susan-khatri.com.np/java21">Java 21</a>
+        <a href="https://susan-khatri.com.np/about">About</a>
+        <a href="https://susan-khatri.com.np/contact">Contact</a>
+        <a href="https://susan-khatri.com.np/privacy">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      This privacy policy was last updated January 1, 2025 &nbsp;·&nbsp; susan-khatri.com.np
+    </div>
+  </footer>
+
+  <!-- STICKY BOTTOM AD -->
+  <div class="ad-sticky" id="sticky-ad">
+    <span class="ad-sticky-lbl">Ad</span>
+    <div class="ad-sticky-slot" id="ad-bottom"><!-- PASTE AD CODE HERE --> 728 × 60 — Sticky Footer Ad</div>
+    <button class="close-sticky" onclick="document.getElementById('sticky-ad').style.display='none'" title="Close">×</button>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Java vs JDK vs JRE Explained For Beginners | Susan Khatri</title>
+  <meta name="description" content="What is the difference between Java, JDK, and JRE? A simple beginner-friendly guide for students. Learn which one you actually need and why it matters, with examples and clear explanations."/>
+  <meta name="keywords" content="Java vs JDK vs JRE, what is JDK, what is JRE, difference JDK JRE, Java beginners guide, do I need JDK or JRE, Java explained students, JVM JDK JRE difference"/>
+  <meta name="author" content="Susan Khatri"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://susan-khatri.com.np/java-jdk-jre"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://susan-khatri.com.np/java-jdk-jre"/>
+  <meta property="og:title" content="Java vs JDK vs JRE – Simple Explanation For Beginners"/>
+  <meta property="og:description" content="Clear, beginner-friendly guide explaining the difference between Java, JDK, JRE, and JVM — with examples and a simple recommendation for students."/>
+  <meta property="og:image" content="https://susan-khatri.com.np/og-image.png"/>
+  <meta property="og:site_name" content="Susan Khatri Tools Hub"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is the difference between JDK and JRE?","acceptedAnswer":{"@type":"Answer","text":"The JDK (Java Development Kit) is for writing and compiling Java programs. It includes the JRE plus development tools like the javac compiler. The JRE (Java Runtime Environment) is for running already-compiled Java programs. It does not include the compiler. Students who are writing Java code need the JDK."}},
+    {"@type":"Question","name":"Do I need the JDK or the JRE as a student?","acceptedAnswer":{"@type":"Answer","text":"You need the JDK. If your course asks you to write Java programs, compile them, and run them, you need the JDK. The JRE alone cannot compile code. The JDK contains everything the JRE has, plus the compiler and other development tools."}},
+    {"@type":"Question","name":"What is the JVM?","acceptedAnswer":{"@type":"Answer","text":"The JVM (Java Virtual Machine) is the engine that actually runs Java programs. It reads compiled Java bytecode and executes it. The JVM is what makes Java platform-independent — the same compiled Java program runs on Windows, Mac, and Linux because each platform has its own JVM."}},
+    {"@type":"Question","name":"What is Java exactly?","acceptedAnswer":{"@type":"Answer","text":"Java refers to the programming language itself — the syntax, rules, and keywords you use to write Java code. When people say they installed Java, they usually mean they installed the JRE or JDK, which includes the tools to run or compile Java programs."}}
+  ]}</script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--bg:#060910;--surface:#0d1321;--card:#111d2e;--border:#1e3050;--accent:#818cf8;--accent-dim:rgba(129,140,248,.12);--accent-border:rgba(129,140,248,.3);--blue:#38bdf8;--green:#34d399;--orange:#fb923c;--yellow:#facc15;--text:#e0eaf8;--muted:#6b87a8;--mono:'DM Mono',monospace;--sans:'Outfit',sans-serif;--glow:0 0 30px rgba(129,140,248,.18);}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.75;overflow-x:hidden;padding-bottom:80px;}
+    body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(129,140,248,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(129,140,248,.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0;}
+    nav{position:sticky;top:0;z-index:100;background:rgba(6,9,16,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;}
+    .nav-logo{font-weight:700;font-size:1rem;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:8px;}
+    .nav-logo span{color:var(--blue);}
+    .nav-dot{width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 8px var(--blue);animation:pulse 2s infinite;}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+    .nav-links{display:flex;gap:24px;list-style:none;}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:.88rem;font-weight:500;transition:color .2s;}
+    .nav-links a:hover{color:var(--blue);}
+    @media(max-width:580px){.nav-links{display:none;}}
+    .ad-banner{width:100%;min-height:90px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center;position:relative;z-index:10;}
+    .ad-label{font-family:var(--mono);font-size:9px;color:var(--muted);position:absolute;top:6px;left:12px;letter-spacing:.1em;text-transform:uppercase;}
+    .ad-slot{width:728px;max-width:95%;height:90px;background:repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px);border:1px dashed var(--border);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;color:var(--muted);}
+    .hero{position:relative;z-index:2;text-align:center;padding:80px 24px 50px;max-width:760px;margin:0 auto;}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:var(--accent-dim);border:1px solid var(--accent-border);color:var(--accent);font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:26px;}
+    h1{font-size:clamp(2rem,4.5vw,3.3rem);font-weight:800;line-height:1.1;margin-bottom:18px;letter-spacing:-.02em;}
+    h1 span{color:var(--accent);}
+    .hero-sub{font-size:1.05rem;color:var(--muted);max-width:580px;margin:0 auto;font-weight:300;}
+    section{position:relative;z-index:2;max-width:1000px;margin:0 auto;padding:0 24px 70px;}
+    .section-tag{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;}
+    h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;margin-bottom:10px;letter-spacing:-.02em;}
+    .section-sub{color:var(--muted);font-size:.93rem;max-width:560px;margin-bottom:36px;font-weight:300;}
+
+    /* TERM CARDS */
+    .term-cards{display:grid;gap:20px;}
+    .term-card{border-radius:14px;padding:28px 30px;border:1px solid var(--border);transition:transform .2s;}
+    .term-card:hover{transform:translateY(-3px);}
+    .term-card.java{background:linear-gradient(135deg,#1a1230,#111d2e);border-color:var(--accent-border);}
+    .term-card.jdk{background:linear-gradient(135deg,#0d1e10,#111d2e);border-color:rgba(52,211,153,.3);}
+    .term-card.jre{background:linear-gradient(135deg,#1a180d,#111d2e);border-color:rgba(250,204,21,.3);}
+    .term-card.jvm{background:linear-gradient(135deg,#0d1828,#111d2e);border-color:rgba(56,189,248,.3);}
+    .term-header{display:flex;align-items:center;gap:16px;margin-bottom:18px;}
+    .term-badge{font-family:var(--mono);font-size:1.1rem;font-weight:700;padding:10px 18px;border-radius:10px;letter-spacing:.04em;}
+    .term-badge.java{background:rgba(129,140,248,.15);color:var(--accent);border:1px solid var(--accent-border);}
+    .term-badge.jdk{background:rgba(52,211,153,.12);color:var(--green);border:1px solid rgba(52,211,153,.3);}
+    .term-badge.jre{background:rgba(250,204,21,.1);color:var(--yellow);border:1px solid rgba(250,204,21,.25);}
+    .term-badge.jvm{background:rgba(56,189,248,.1);color:var(--blue);border:1px solid rgba(56,189,248,.25);}
+    .term-header-text h3{font-size:1.1rem;font-weight:700;margin-bottom:3px;}
+    .term-header-text .full{font-size:.82rem;color:var(--muted);font-family:var(--mono);}
+    .term-desc{font-size:.88rem;color:var(--muted);line-height:1.8;margin-bottom:16px;}
+    .term-includes{display:grid;gap:6px;}
+    .include-item{display:flex;align-items:flex-start;gap:8px;font-size:.83rem;color:var(--muted);}
+    .include-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:6px;}
+    .include-dot.purple{background:var(--accent);}
+    .include-dot.green{background:var(--green);}
+    .include-dot.yellow{background:var(--yellow);}
+    .include-dot.blue{background:var(--blue);}
+
+    /* ANALOGY CARD */
+    .analogy-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px 30px;}
+    .analogy-card h3{font-size:1.05rem;font-weight:700;margin-bottom:14px;}
+    .analogy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;}
+    .analogy-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px;}
+    .analogy-item .emoji{font-size:1.6rem;margin-bottom:8px;}
+    .analogy-item h4{font-size:.9rem;font-weight:700;margin-bottom:4px;}
+    .analogy-item p{font-size:.8rem;color:var(--muted);line-height:1.6;}
+
+    /* COMPARISON TABLE */
+    .table-wrap{overflow-x:auto;border-radius:12px;border:1px solid var(--border);}
+    table{width:100%;border-collapse:collapse;font-size:.85rem;}
+    thead tr{background:var(--surface);}
+    th{padding:14px 16px;text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;border-bottom:1px solid var(--border);}
+    td{padding:14px 16px;border-bottom:1px solid var(--border);vertical-align:middle;color:var(--muted);}
+    tr:last-child td{border-bottom:none;}
+    tr:nth-child(even) td{background:rgba(255,255,255,.015);}
+    td:first-child{font-weight:600;color:var(--text);}
+    .check{color:var(--green);}
+    .cross{color:#f87171;}
+
+    /* DIAGRAM */
+    .diagram{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:30px;text-align:center;}
+    .diagram-title{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:24px;}
+    .diagram-box{border-radius:12px;padding:16px;margin-bottom:12px;position:relative;}
+    .diagram-box.jdk-box{background:rgba(52,211,153,.07);border:1px solid rgba(52,211,153,.25);}
+    .diagram-box.jre-box{background:rgba(250,204,21,.07);border:1px solid rgba(250,204,21,.2);margin:0 30px 12px;}
+    .diagram-box.jvm-box{background:rgba(56,189,248,.07);border:1px solid rgba(56,189,248,.2);margin:0 60px 0;}
+    .diagram-box-label{font-family:var(--mono);font-size:.8rem;font-weight:700;margin-bottom:6px;}
+    .diagram-box-label.green{color:var(--green);}
+    .diagram-box-label.yellow{color:var(--yellow);}
+    .diagram-box-label.blue{color:var(--blue);}
+    .diagram-box-desc{font-size:.78rem;color:var(--muted);}
+
+    /* RECOMMENDATION */
+    .rec-card{background:linear-gradient(135deg,#0d1321,#1a2235);border:1px solid var(--accent-border);border-radius:14px;padding:30px;box-shadow:var(--glow);}
+    .rec-card h3{font-size:1.1rem;font-weight:700;margin-bottom:16px;}
+    .rec-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;padding:16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;}
+    .rec-item:last-child{margin-bottom:0;}
+    .rec-icon{font-size:1.4rem;flex-shrink:0;margin-top:2px;}
+    .rec-item h4{font-size:.92rem;font-weight:700;margin-bottom:4px;}
+    .rec-item p{font-size:.82rem;color:var(--muted);line-height:1.6;}
+
+    .faq{display:grid;gap:10px;}
+    details{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color .2s;}
+    details[open]{border-color:var(--accent-border);}
+    summary{padding:18px 22px;font-size:.93rem;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none;}
+    summary::-webkit-details-marker{display:none;}
+    summary::after{content:'+';font-size:1.3rem;color:var(--accent);transition:transform .2s;flex-shrink:0;}
+    details[open] summary::after{transform:rotate(45deg);}
+    .faq-body{padding:0 22px 18px;font-size:.85rem;color:var(--muted);line-height:1.75;}
+    code{background:rgba(255,255,255,.07);border:1px solid var(--border);border-radius:4px;padding:2px 7px;font-family:var(--mono);font-size:.8rem;color:#a5f3fc;}
+    .cta-wrap{position:relative;z-index:2;max-width:1000px;margin:0 auto 70px;padding:0 24px;}
+    .cta-inner{background:linear-gradient(135deg,#0d1321,#111d2e);border:1px solid rgba(251,146,60,.3);border-radius:16px;padding:44px 36px;text-align:center;box-shadow:0 0 30px rgba(251,146,60,.1);}
+    .cta-inner h2{margin-bottom:10px;}
+    .cta-inner p{color:var(--muted);margin-bottom:26px;font-size:.93rem;}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#060910;font-weight:700;font-size:.95rem;padding:13px 28px;border-radius:8px;text-decoration:none;transition:box-shadow .2s,transform .15s;box-shadow:0 0 24px rgba(251,146,60,.25);}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(251,146,60,.4);}
+    .ad-mid-wrap{position:relative;z-index:2;max-width:1000px;margin:0 auto 50px;padding:0 24px;}
+    .ad-mid-inner{min-height:100px;background:var(--surface);border:1px dashed var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;position:relative;}
+    .ad-mid-slot{width:728px;max-width:95%;height:90px;background:repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px);border:1px dashed var(--border);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;color:var(--muted);}
+    footer{position:relative;z-index:2;border-top:1px solid var(--border);background:var(--surface);padding:36px 24px 24px;}
+    .footer-inner{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+    .footer-brand{font-size:.82rem;color:var(--muted);}
+    .footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+    .footer-links a{color:var(--muted);text-decoration:none;font-size:.82rem;transition:color .2s;}
+    .footer-links a:hover{color:var(--blue);}
+    .footer-bottom{max-width:1000px;margin:20px auto 0;padding-top:16px;border-top:1px solid var(--border);font-size:.75rem;color:var(--muted);font-family:var(--mono);text-align:center;}
+    .ad-sticky{position:fixed;bottom:0;left:0;right:0;background:rgba(13,19,33,.95);backdrop-filter:blur(10px);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:center;padding:8px 16px;z-index:200;gap:14px;}
+    .ad-sticky-lbl{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;}
+    .ad-sticky-slot{width:728px;max-width:80%;height:60px;background:repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px);border:1px dashed var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;color:var(--muted);}
+    .close-sticky{background:none;border:1px solid var(--border);color:var(--muted);width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .2s,color .2s;}
+    .close-sticky:hover{border-color:var(--accent);color:var(--accent);}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="https://susan-khatri.com.np/" class="nav-logo"><div class="nav-dot"></div>Susan<span>Khatri</span></a>
+    <ul class="nav-links">
+      <li><a href="https://susan-khatri.com.np/">Home</a></li>
+      <li><a href="https://susan-khatri.com.np/java21">Java 21</a></li>
+      <li><a href="https://susan-khatri.com.np/python">Python</a></li>
+      <li><a href="https://susan-khatri.com.np/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="ad-banner"><span class="ad-label">Advertisement</span><div class="ad-slot" id="ad-top"><!-- AD CODE HERE --> 728×90 Ad</div></div>
+
+  <div class="hero">
+    <div class="badge">📚 Plain English · No Jargon · Student Friendly</div>
+    <h1>Java vs JDK vs JRE<br/><span>Explained Simply</span></h1>
+    <p class="hero-sub">If you have ever wondered what the difference is between Java, the JDK, and the JRE — and which one you actually need — this guide explains it all in plain language with zero confusing jargon.</p>
+  </div>
+
+  <section>
+    <div class="section-tag">// The Short Answer First</div>
+    <h2>Which One Do You Need?</h2>
+    <p class="section-sub">Before the detailed explanation, here is the quick answer most students are looking for.</p>
+    <div class="rec-card">
+      <h3>🎯 Quick Recommendation</h3>
+      <div class="rec-item"><div class="rec-icon">✏️</div><div><h4>Writing and learning Java? → Download the JDK</h4><p>If you are a student writing Java programs, your class assignments require compiling code. Only the JDK includes the javac compiler. This is what you need. The JDK also contains the JRE inside it, so you get everything in one download.</p></div></div>
+      <div class="rec-item"><div class="rec-icon">▶️</div><div><h4>Just running a Java app someone else made? → JRE is enough</h4><p>If a teacher gives you a pre-compiled .jar file to run and you are not writing any code yourself, the JRE alone is sufficient. It can run Java programs but cannot compile them.</p></div></div>
+      <div class="rec-item"><div class="rec-icon">🎓</div><div><h4>Taking a CS or programming course? → Always get the JDK</h4><p>When in doubt, get the JDK. It includes everything the JRE has, plus more. You can never go wrong downloading the JDK — it is the safe choice for any student.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-tag">// The Full Explanation</div>
+    <h2>Each Term Explained</h2>
+    <p class="section-sub">Here is what each term actually means, written in plain English.</p>
+    <div class="term-cards">
+      <div class="term-card java">
+        <div class="term-header">
+          <div class="term-badge java">Java</div>
+          <div class="term-header-text"><h3>The Programming Language</h3><div class="full">// the language you write code in</div></div>
+        </div>
+        <p class="term-desc">Java (with a capital J) is a programming language — a set of rules, keywords, and syntax for writing instructions that a computer can follow. When your teacher says "we are learning Java this semester," they mean the language. Java was created by Sun Microsystems in 1995 and is now maintained by Oracle. It is one of the most widely used languages in the world, especially in schools, universities, and enterprise software. Writing Java code means creating <code>.java</code> files full of instructions. But to actually run those instructions, you need additional tools — that is where the JDK and JRE come in.</p>
+        <div class="term-includes">
+          <div class="include-item"><div class="include-dot purple"></div>The programming language syntax and rules</div>
+          <div class="include-item"><div class="include-dot purple"></div>Keywords like class, public, static, void, if, for</div>
+          <div class="include-item"><div class="include-dot purple"></div>Object-oriented programming concepts built into the language</div>
+        </div>
+      </div>
+
+      <div class="term-card jdk">
+        <div class="term-header">
+          <div class="term-badge jdk">JDK</div>
+          <div class="term-header-text"><h3>Java Development Kit</h3><div class="full">// the full toolbox for developers</div></div>
+        </div>
+        <p class="term-desc">The JDK is the complete package for anyone who wants to write Java programs. Think of it as a full professional toolbox. It contains the compiler that turns your <code>.java</code> source files into <code>.class</code> bytecode files, plus the JRE (so you can also run programs), plus extra debugging and profiling tools. When you download Java 21 from Oracle's website, you are downloading the JDK. Students writing Java code for school assignments, projects, or personal learning always need the JDK.</p>
+        <div class="term-includes">
+          <div class="include-item"><div class="include-dot green"></div>javac — the Java compiler (turns .java into .class)</div>
+          <div class="include-item"><div class="include-dot green"></div>java — the program launcher (runs compiled code)</div>
+          <div class="include-item"><div class="include-dot green"></div>jar — tool for packaging Java apps into .jar files</div>
+          <div class="include-item"><div class="include-dot green"></div>javadoc — automatic documentation generator</div>
+          <div class="include-item"><div class="include-dot green"></div>The complete JRE (included inside the JDK)</div>
+        </div>
+      </div>
+
+      <div class="term-card jre">
+        <div class="term-header">
+          <div class="term-badge jre">JRE</div>
+          <div class="term-header-text"><h3>Java Runtime Environment</h3><div class="full">// just enough to run Java programs</div></div>
+        </div>
+        <p class="term-desc">The JRE is a smaller package that only contains what is needed to run Java programs — it cannot compile them. It is like having a DVD player but no camera. You can play movies (run programs), but you cannot record new ones (write and compile code). In older versions of Java (before Java 11), Oracle distributed the JRE separately as a lighter download. From Java 11 onwards, Oracle stopped distributing a separate JRE. The JDK now serves both purposes. So for modern Java versions, JDK is what you download regardless.</p>
+        <div class="term-includes">
+          <div class="include-item"><div class="include-dot yellow"></div>java — the program launcher</div>
+          <div class="include-item"><div class="include-dot yellow"></div>The Java standard class libraries</div>
+          <div class="include-item"><div class="include-dot yellow"></div>The JVM (Java Virtual Machine)</div>
+          <div class="include-item"><div class="include-dot yellow"></div>Everything needed to run compiled .class or .jar files</div>
+        </div>
+      </div>
+
+      <div class="term-card jvm">
+        <div class="term-header">
+          <div class="term-badge jvm">JVM</div>
+          <div class="term-header-text"><h3>Java Virtual Machine</h3><div class="full">// the engine that actually runs your code</div></div>
+        </div>
+        <p class="term-desc">The JVM is the actual engine underneath everything. It reads compiled Java bytecode (the <code>.class</code> files) and executes them. The JVM is what makes Java famous for being "write once, run anywhere" — because different operating systems (Windows, Mac, Linux) each have their own JVM, the same compiled Java program runs on all of them without any changes. You do not interact with the JVM directly. It runs automatically when you type <code>java MyProgram</code> in the terminal. It is included inside both the JRE and the JDK.</p>
+        <div class="term-includes">
+          <div class="include-item"><div class="include-dot blue"></div>Reads and executes Java bytecode (.class files)</div>
+          <div class="include-item"><div class="include-dot blue"></div>Makes Java platform-independent (same code, any OS)</div>
+          <div class="include-item"><div class="include-dot blue"></div>Manages memory automatically (garbage collection)</div>
+          <div class="include-item"><div class="include-dot blue"></div>Included inside both the JRE and JDK</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-tag">// Visual Overview</div>
+    <h2>How They Fit Together</h2>
+    <p class="section-sub">The JDK contains the JRE, which contains the JVM. Think of it like nesting dolls.</p>
+    <div class="diagram">
+      <div class="diagram-title">// Nesting structure — larger boxes contain smaller ones</div>
+      <div class="diagram-box jdk-box">
+        <div class="diagram-box-label green">JDK — Java Development Kit</div>
+        <div class="diagram-box-desc">Compiler (javac) + Debugger + Extra Tools + Everything below</div>
+        <div class="diagram-box jre-box">
+          <div class="diagram-box-label yellow">JRE — Java Runtime Environment</div>
+          <div class="diagram-box-desc">Standard Libraries + Everything below</div>
+          <div class="diagram-box jvm-box">
+            <div class="diagram-box-label blue">JVM — Java Virtual Machine</div>
+            <div class="diagram-box-desc">Executes bytecode on your specific operating system</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-tag">// Real World Analogy</div>
+    <h2>A Simple Analogy</h2>
+    <p class="section-sub">Think of Java like baking. The terms make much more sense this way.</p>
+    <div class="analogy-card">
+      <h3>🍞 The Bakery Analogy</h3>
+      <div class="analogy-grid">
+        <div class="analogy-item"><div class="emoji">📖</div><h4>Java (the language)</h4><p>The recipe. It tells you exactly what to do, step by step, but by itself it is just instructions on paper.</p></div>
+        <div class="analogy-item"><div class="emoji">🧑‍🍳</div><h4>JDK (the development kit)</h4><p>The full professional kitchen. Oven, mixer, measuring cups, knives — everything a baker needs to create something from a recipe.</p></div>
+        <div class="analogy-item"><div class="emoji">🍽️</div><h4>JRE (the runtime)</h4><p>Just the oven. You can bake pre-made dough (run programs), but you cannot measure, mix, or prepare ingredients from scratch (compile code).</p></div>
+        <div class="analogy-item"><div class="emoji">🔥</div><h4>JVM (the virtual machine)</h4><p>The heat itself — the actual process that transforms the dough into bread. Works behind the scenes, but nothing runs without it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ad-mid-wrap"><div class="ad-mid-inner"><span class="ad-label">Advertisement</span><div class="ad-mid-slot" id="ad-mid"><!-- AD CODE HERE --> 728×90 Ad</div></div></div>
+
+  <section>
+    <div class="section-tag">// Comparison</div>
+    <h2>JDK vs JRE at a Glance</h2>
+    <p class="section-sub">A quick reference table to settle any remaining confusion.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Feature</th><th>JDK</th><th>JRE</th></tr></thead>
+        <tbody>
+          <tr><td>Run Java programs</td><td class="check">✓ Yes</td><td class="check">✓ Yes</td></tr>
+          <tr><td>Compile .java files</td><td class="check">✓ Yes (javac)</td><td class="cross">✗ No</td></tr>
+          <tr><td>Includes JVM</td><td class="check">✓ Yes</td><td class="check">✓ Yes</td></tr>
+          <tr><td>Includes JRE</td><td class="check">✓ Yes</td><td>Is the JRE</td></tr>
+          <tr><td>Debug tools</td><td class="check">✓ Yes</td><td class="cross">✗ No</td></tr>
+          <tr><td>For students writing code</td><td class="check">✓ Correct choice</td><td class="cross">✗ Not enough</td></tr>
+          <tr><td>Download size</td><td>~180 MB</td><td>Not distributed separately for Java 11+</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="section-tag">// FAQ</div>
+    <h2>Frequently Asked Questions</h2>
+    <p class="section-sub">The questions students ask most often about Java, JDK, and JRE.</p>
+    <div class="faq">
+      <details><summary>My teacher said to install Java. Do they mean JDK or JRE?</summary><div class="faq-body">Almost certainly the JDK. When teachers say "install Java" in a programming course context, they mean the full development kit. If your course involves writing any code at all, you need the JDK. Download Java 21 JDK from Oracle or from the Java 21 guide on this site.</div></details>
+      <details><summary>If JDK includes everything, why does JRE exist at all?</summary><div class="faq-body">Historically, the JRE existed as a smaller, lighter download for people who just needed to run Java applications — not develop them. At one point, many websites used Java plugins that required the JRE. Today, Java web plugins are gone, and Oracle no longer ships a separate JRE for Java 11 and above. For modern Java, just download the JDK and you have everything.</div></details>
+      <details><summary>Can I use <code>javac</code> with the portable JDK ZIP?</summary><div class="faq-body">Yes. The portable Java 21 JDK ZIP from Oracle includes javac inside the bin folder. After setting your PATH, you can compile with <code>javac MyFile.java</code> and run with <code>java MyFile</code> — everything works exactly as it does with an installed version.</div></details>
+      <details><summary>What is OpenJDK and is it different from Oracle JDK?</summary><div class="faq-body">OpenJDK is the open-source version of Java. Oracle JDK is Oracle's official build, which is based on OpenJDK but has some additional features and long-term commercial support. For students, both work identically. Oracle JDK is free for personal and educational use. OpenJDK builds (like those from Adoptium) are always free with no licensing concerns.</div></details>
+    </div>
+  </section>
+
+  <div class="cta-wrap">
+    <div class="cta-inner">
+      <h2>Ready to Download Java 21 JDK?</h2>
+      <p>Now that you know exactly what the JDK is and why you need it, grab the portable ZIP for school computers — no admin rights, no installer.</p>
+      <a href="https://susan-khatri.com.np/java21" class="btn-primary">☕ Download Java 21 JDK – Portable ZIP</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">© 2025 susan-khatri.com.np · All rights reserved</div>
+      <div class="footer-links">
+        <a href="https://susan-khatri.com.np/">Home</a>
+        <a href="https://susan-khatri.com.np/java21">Java 21</a>
+        <a href="https://susan-khatri.com.np/python">Python</a>
+        <a href="https://susan-khatri.com.np/about">About</a>
+        <a href="https://susan-khatri.com.np/contact">Contact</a>
+        <a href="https://susan-khatri.com.np/privacy">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">susan-khatri.com.np · Java educational guides for students · For educational use</div>
+  </footer>
+  <div class="ad-sticky" id="sticky-ad"><span class="ad-sticky-lbl">Ad</span><div class="ad-sticky-slot" id="ad-bottom"><!-- AD CODE HERE --> 728×60 Ad</div><button class="close-sticky" onclick="document.getElementById('sticky-ad').style.display='none'">×</button></div>
+</body>
+</html>

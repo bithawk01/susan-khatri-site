@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- SEO -->
+  <title>Contact – Susan Khatri Tools Hub</title>
+  <meta name="description" content="Get in touch with Susan Khatri Tools Hub. We help students with Java, Python, and portable software questions. Response time: 1–2 business days."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://susan-khatri.com.np/contact"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://susan-khatri.com.np/contact"/>
+  <meta property="og:title" content="Contact – Susan Khatri Tools Hub"/>
+  <meta property="og:description" content="Have a question about portable Java, Python, or coding tools for school? Reach out — we respond in 1–2 business days."/>
+  <meta property="og:site_name" content="Susan Khatri Tools Hub"/>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Susan Khatri Tools Hub",
+    "url": "https://susan-khatri.com.np/contact",
+    "description": "Contact page for Susan Khatri Tools Hub. Get help with portable Java, Python, and coding tools for school computers.",
+    "publisher": {
+      "@type": "Person",
+      "name": "Susan Khatri",
+      "url": "https://susan-khatri.com.np",
+      "email": "techsupport085@gmail.com"
+    }
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --bg: #060910;
+      --surface: #0d1321;
+      --card: #111d2e;
+      --border: #1e3050;
+      --accent: #38bdf8;
+      --accent2: #818cf8;
+      --green: #34d399;
+      --orange: #fb923c;
+      --text: #e0eaf8;
+      --muted: #6b87a8;
+      --mono: 'DM Mono', monospace;
+      --sans: 'Outfit', sans-serif;
+      --glow: 0 0 28px rgba(56,189,248,.2);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+      padding-bottom: 80px;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image:
+        linear-gradient(rgba(56,189,248,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56,189,248,.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none; z-index: 0;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(6,9,16,.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px; height: 60px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-weight: 700; font-size: 1rem;
+      color: var(--text); text-decoration: none;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--accent); box-shadow: 0 0 8px var(--accent);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1}50%{opacity:.4} }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: .88rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--accent); }
+    @media(max-width:580px){ .nav-links { display: none; } }
+
+    /* AD BANNER */
+    .ad-banner {
+      width: 100%; min-height: 90px;
+      background: var(--surface); border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      position: relative; z-index: 10;
+    }
+    .ad-label {
+      font-family: var(--mono); font-size: 9px; color: var(--muted);
+      position: absolute; top: 6px; left: 12px;
+      letter-spacing: .1em; text-transform: uppercase;
+    }
+    .ad-slot {
+      width: 728px; max-width: 95%; height: 90px;
+      background: repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px);
+      border: 1px dashed var(--border); border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-size: 11px; color: var(--muted);
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      position: relative; z-index: 2;
+      padding: 60px 24px 40px; text-align: center;
+      max-width: 640px; margin: 0 auto;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(52,211,153,.1);
+      border: 1px solid rgba(52,211,153,.3);
+      color: var(--green);
+      font-family: var(--mono); font-size: 11px;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: 5px 16px; border-radius: 20px; margin-bottom: 20px;
+    }
+    h1 {
+      font-size: clamp(1.9rem, 4vw, 2.9rem);
+      font-weight: 800; letter-spacing: -.02em; margin-bottom: 12px;
+    }
+    h1 span {
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .page-sub { color: var(--muted); font-size: .94rem; font-weight: 300; }
+
+    /* MAIN LAYOUT */
+    .main-wrap {
+      position: relative; z-index: 2;
+      max-width: 1000px; margin: 0 auto;
+      padding: 0 24px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media(max-width:720px){ .main-wrap { grid-template-columns: 1fr; } }
+
+    /* LEFT PANEL */
+    .left-panel { display: grid; gap: 16px; }
+
+    .info-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      transition: border-color .2s;
+    }
+    .info-card:hover { border-color: rgba(56,189,248,.25); }
+
+    .info-card-label {
+      font-family: var(--mono); font-size: 10px;
+      color: var(--accent2); letter-spacing: .12em;
+      text-transform: uppercase; margin-bottom: 14px;
+    }
+
+    .contact-item {
+      display: flex; align-items: flex-start;
+      gap: 14px; margin-bottom: 18px;
+    }
+    .contact-item:last-child { margin-bottom: 0; }
+    .contact-icon {
+      width: 40px; height: 40px; border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+    }
+    .contact-icon.blue { background: rgba(56,189,248,.12); border: 1px solid rgba(56,189,248,.2); }
+    .contact-icon.green { background: rgba(52,211,153,.12); border: 1px solid rgba(52,211,153,.2); }
+    .contact-icon.purple { background: rgba(129,140,248,.12); border: 1px solid rgba(129,140,248,.2); }
+    .contact-item-body h3 { font-size: .9rem; font-weight: 700; margin-bottom: 3px; }
+    .contact-item-body p { font-size: .82rem; color: var(--muted); line-height: 1.5; }
+    .contact-item-body a { color: var(--accent); text-decoration: none; font-size: .82rem; }
+    .contact-item-body a:hover { text-decoration: underline; }
+
+    /* SUPPORT TOPICS */
+    .topic-list { display: grid; gap: 8px; }
+    .topic {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px; padding: 12px 14px;
+      font-size: .84rem; color: var(--text);
+      transition: border-color .2s;
+    }
+    .topic:hover { border-color: rgba(56,189,248,.3); }
+    .topic-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .topic-dot.blue { background: var(--accent); }
+    .topic-dot.purple { background: var(--accent2); }
+    .topic-dot.green { background: var(--green); }
+    .topic-dot.orange { background: var(--orange); }
+
+    /* RIGHT — FORM */
+    .form-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px;
+      box-shadow: var(--glow);
+      border-color: rgba(56,189,248,.2);
+    }
+    .form-card h2 {
+      font-size: 1.15rem; font-weight: 700; margin-bottom: 6px;
+    }
+    .form-card .form-sub {
+      font-size: .83rem; color: var(--muted); margin-bottom: 26px;
+    }
+
+    .form-group { margin-bottom: 18px; }
+    label {
+      display: block; font-size: .82rem; font-weight: 600;
+      color: var(--text); margin-bottom: 7px;
+    }
+    label span { color: var(--accent); margin-left: 2px; }
+
+    input, select, textarea {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: .88rem;
+      padding: 12px 14px;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+      appearance: none;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(56,189,248,.1);
+    }
+    input::placeholder, textarea::placeholder { color: var(--muted); }
+    textarea { resize: vertical; min-height: 130px; }
+    select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b87a8' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media(max-width:480px){ .form-row { grid-template-columns: 1fr; } }
+
+    .btn-submit {
+      width: 100%; padding: 14px;
+      background: var(--accent);
+      color: #060910;
+      font-family: var(--sans);
+      font-size: .97rem; font-weight: 700;
+      border: none; border-radius: 8px;
+      cursor: pointer;
+      transition: box-shadow .2s, transform .15s;
+      box-shadow: 0 0 24px rgba(56,189,248,.3);
+      margin-top: 6px;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 36px rgba(56,189,248,.45);
+    }
+    .btn-submit:active { transform: translateY(0); }
+
+    .form-note {
+      text-align: center; margin-top: 14px;
+      font-size: .78rem; color: var(--muted);
+      font-family: var(--mono); letter-spacing: .04em;
+    }
+    .form-note span { color: var(--green); }
+
+    /* SUCCESS MESSAGE */
+    .success-msg {
+      display: none;
+      background: rgba(52,211,153,.1);
+      border: 1px solid rgba(52,211,153,.3);
+      border-radius: 10px; padding: 20px 22px;
+      text-align: center; margin-top: 16px;
+    }
+    .success-msg.show { display: block; }
+    .success-msg h3 { font-size: 1rem; color: var(--green); margin-bottom: 6px; }
+    .success-msg p { font-size: .83rem; color: var(--muted); }
+
+    /* MID AD */
+    .ad-mid-wrap {
+      position: relative; z-index: 2;
+      max-width: 1000px; margin: 0 auto 24px;
+      padding: 0 24px;
+    }
+    .ad-mid-inner {
+      min-height: 100px; background: var(--surface);
+      border: 1px dashed var(--border); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .ad-mid-slot {
+      width: 728px; max-width: 95%; height: 90px;
+      background: repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px);
+      border: 1px dashed var(--border); border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-size: 11px; color: var(--muted);
+    }
+
+    /* FOOTER */
+    footer {
+      position: relative; z-index: 2;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      padding: 36px 24px 24px;
+    }
+    .footer-inner {
+      max-width: 1000px; margin: 0 auto;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 16px;
+    }
+    .footer-brand { font-size: .82rem; color: var(--muted); }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: .82rem; transition: color .2s; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-bottom {
+      max-width: 1000px; margin: 20px auto 0;
+      padding-top: 16px; border-top: 1px solid var(--border);
+      font-size: .75rem; color: var(--muted);
+      font-family: var(--mono); text-align: center;
+    }
+
+    /* STICKY AD */
+    .ad-sticky {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: rgba(13,19,33,.95); backdrop-filter: blur(10px);
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      padding: 8px 16px; z-index: 200; gap: 14px;
+    }
+    .ad-sticky-lbl { font-family: var(--mono); font-size: 9px; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+    .ad-sticky-slot {
+      width: 728px; max-width: 80%; height: 60px;
+      background: repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px);
+      border: 1px dashed var(--border); border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-size: 11px; color: var(--muted);
+    }
+    .close-sticky {
+      background: none; border: 1px solid var(--border); color: var(--muted);
+      width: 28px; height: 28px; border-radius: 50%; cursor: pointer;
+      font-size: 15px; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; transition: border-color .2s, color .2s;
+    }
+    .close-sticky:hover { border-color: var(--accent); color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="https://susan-khatri.com.np/" class="nav-logo">
+      <div class="nav-dot"></div>Susan<span>Khatri</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="https://susan-khatri.com.np/">Home</a></li>
+      <li><a href="https://susan-khatri.com.np/java21">Java 21</a></li>
+      <li><a href="https://susan-khatri.com.np/about">About</a></li>
+      <li><a href="https://susan-khatri.com.np/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- TOP AD -->
+  <div class="ad-banner">
+    <span class="ad-label">Advertisement</span>
+    <div class="ad-slot" id="ad-top"><!-- PASTE AD CODE HERE --> 728 × 90 — Leaderboard Ad</div>
+  </div>
+
+  <div class="page-header">
+    <div class="badge">⚡ We Reply in 1–2 Business Days</div>
+    <h1>Get in <span>Touch</span></h1>
+    <p class="page-sub">Have a question about a tool, a guide that is not working, or just want to say hi? Send us a message and we will get back to you.</p>
+  </div>
+
+  <div class="main-wrap">
+
+    <!-- LEFT: INFO -->
+    <div class="left-panel">
+
+      <!-- Contact Details -->
+      <div class="info-card">
+        <div class="info-card-label">// Contact Info</div>
+        <div class="contact-item">
+          <div class="contact-icon blue">📧</div>
+          <div class="contact-item-body">
+            <h3>Email</h3>
+            <a href="mailto:techsupport085@gmail.com">techsupport085@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon green">⏱️</div>
+          <div class="contact-item-body">
+            <h3>Response Time</h3>
+            <p>Usually within 1–2 business days</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon purple">🌏</div>
+          <div class="contact-item-body">
+            <h3>Location</h3>
+            <p>Nepal (NST, UTC+5:45)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Support Topics -->
+      <div class="info-card">
+        <div class="info-card-label">// What We Can Help With</div>
+        <div class="topic-list">
+          <div class="topic"><div class="topic-dot blue"></div> Java 21 download or setup issues</div>
+          <div class="topic"><div class="topic-dot purple"></div> Portable software not running correctly</div>
+          <div class="topic"><div class="topic-dot green"></div> Setting JAVA_HOME or PATH on Windows</div>
+          <div class="topic"><div class="topic-dot orange"></div> Guide corrections or outdated information</div>
+          <div class="topic"><div class="topic-dot blue"></div> Suggestions for new tools to add</div>
+          <div class="topic"><div class="topic-dot purple"></div> General beginner coding questions</div>
+          <div class="topic"><div class="topic-dot green"></div> Website feedback or bug reports</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div class="form-card">
+      <h2>Send a Message</h2>
+      <p class="form-sub">Fill in the form below and we will reply to your email within 1–2 business days.</p>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name <span>*</span></label>
+          <input type="text" id="fname" placeholder="e.g. Aarav" autocomplete="given-name"/>
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" id="lname" placeholder="e.g. Sharma" autocomplete="family-name"/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Email Address <span>*</span></label>
+        <input type="email" id="email" placeholder="yourname@gmail.com" autocomplete="email"/>
+      </div>
+
+      <div class="form-group">
+        <label>What do you need help with? <span>*</span></label>
+        <select id="topic">
+          <option value="" disabled selected>Select a topic…</option>
+          <option value="java">Java 21 download or setup</option>
+          <option value="path">Setting JAVA_HOME or PATH</option>
+          <option value="portable">Portable software issue</option>
+          <option value="guide">Guide correction or feedback</option>
+          <option value="suggestion">Tool suggestion</option>
+          <option value="coding">General coding question</option>
+          <option value="other">Something else</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Your Message <span>*</span></label>
+        <textarea id="message" placeholder="Describe your issue or question in as much detail as you can. For example: which operating system you are using, what error message you are seeing, what steps you have already tried…"></textarea>
+      </div>
+
+      <button class="btn-submit" onclick="handleSubmit()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Send Message
+      </button>
+
+      <p class="form-note"><span>✓</span> We read every message personally and reply within 1–2 business days</p>
+
+      <div class="success-msg" id="success-msg">
+        <h3>✅ Message Sent!</h3>
+        <p>Thanks for reaching out. We will reply to <strong id="reply-email"></strong> within 1–2 business days.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MID AD -->
+  <div class="ad-mid-wrap">
+    <div class="ad-mid-inner">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-mid-slot" id="ad-mid"><!-- PASTE AD CODE HERE --> 728 × 90 — Mid Page Ad</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">© 2025 susan-khatri.com.np · All rights reserved</div>
+      <div class="footer-links">
+        <a href="https://susan-khatri.com.np/">Home</a>
+        <a href="https://susan-khatri.com.np/java21">Java 21</a>
+        <a href="https://susan-khatri.com.np/about">About</a>
+        <a href="https://susan-khatri.com.np/contact">Contact</a>
+        <a href="https://susan-khatri.com.np/privacy">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      susan-khatri.com.np &nbsp;·&nbsp; Helping students code since 2024
+    </div>
+  </footer>
+
+  <!-- STICKY BOTTOM AD -->
+  <div class="ad-sticky" id="sticky-ad">
+    <span class="ad-sticky-lbl">Ad</span>
+    <div class="ad-sticky-slot" id="ad-bottom"><!-- PASTE AD CODE HERE --> 728 × 60 — Sticky Footer Ad</div>
+    <button class="close-sticky" onclick="document.getElementById('sticky-ad').style.display='none'" title="Close">×</button>
+  </div>
+
+  <script>
+    function handleSubmit() {
+      const fname = document.getElementById('fname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const topic = document.getElementById('topic').value;
+      const message = document.getElementById('message').value.trim();
+
+      if (!fname) { alert('Please enter your first name.'); return; }
+      if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+      if (!topic) { alert('Please select a topic.'); return; }
+      if (!message) { alert('Please write your message.'); return; }
+
+      // Build mailto link and open it
+      const subject = encodeURIComponent('Contact Form: ' + document.getElementById('topic').options[document.getElementById('topic').selectedIndex].text);
+      const body = encodeURIComponent(
+        'Name: ' + fname + ' ' + document.getElementById('lname').value.trim() + '\n' +
+        'Email: ' + email + '\n' +
+        'Topic: ' + document.getElementById('topic').options[document.getElementById('topic').selectedIndex].text + '\n\n' +
+        'Message:\n' + message
+      );
+      window.location.href = 'mailto:techsupport085@gmail.com?subject=' + subject + '&body=' + body;
+
+      // Show success message
+      document.getElementById('reply-email').textContent = email;
+      document.getElementById('success-msg').classList.add('show');
+      document.querySelector('.btn-submit').textContent = '✓ Message Sent';
+      document.querySelector('.btn-submit').style.background = 'var(--green)';
+      document.querySelector('.btn-submit').disabled = true;
+    }
+  </script>
+
+</body>
+</html>

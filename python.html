@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- SEO -->
+  <title>Python Portable ZIP Download – No Admin Rights | For School Computers</title>
+  <meta name="description" content="Download Python as a portable embeddable ZIP package. No installation, no admin rights needed. Perfect for school computers. Just extract and run Python scripts instantly."/>
+  <meta name="keywords" content="Python portable download, Python embeddable ZIP, Python no admin rights, Python school computer, Python without installing, portable Python Windows, Python ZIP download, run Python school"/>
+  <meta name="author" content="Susan Khatri"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://susan-khatri.com.np/python"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://susan-khatri.com.np/python"/>
+  <meta property="og:title" content="Python Portable ZIP – No Admin Rights Needed"/>
+  <meta property="og:description" content="Run Python on school computers without installation or admin rights. Download the official embeddable ZIP package and start coding in minutes."/>
+  <meta property="og:image" content="https://susan-khatri.com.np/og-image.png"/>
+  <meta property="og:site_name" content="Susan Khatri Tools Hub"/>
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Python Portable ZIP – No Admin Rights Needed"/>
+  <meta name="twitter:description" content="Run Python on school computers without installation or admin rights."/>
+  <meta name="twitter:image" content="https://susan-khatri.com.np/og-image.png"/>
+
+  <!-- Schema: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Python 3 Embeddable ZIP Package",
+    "operatingSystem": "Windows",
+    "applicationCategory": "DeveloperApplication",
+    "description": "Python 3 portable embeddable ZIP for school computers. No admin rights or installation required. Just extract and run.",
+    "url": "https://susan-khatri.com.np/python",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Person", "name": "Susan Khatri", "url": "https://susan-khatri.com.np" }
+  }
+  </script>
+
+  <!-- Schema: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I use Python on a school computer without admin rights?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Python's official embeddable ZIP package requires no installation and no admin rights. Just download, extract, and run Python from any folder you have access to."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Python embeddable ZIP package?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The embeddable ZIP is an official minimal Python distribution released by Python.org. It contains everything needed to run Python scripts without any installation. It is designed specifically for portable and embedded use cases."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I install pip and libraries with the embeddable ZIP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, with a small extra step. You need to enable pip by editing the python3xx._pth file inside the extracted folder, then download get-pip.py and run it. After that, pip works normally and you can install any library."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Python portable work on a USB drive?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can extract the Python embeddable ZIP to a USB drive and carry it between school computers. Just open Command Prompt, navigate to the USB drive, and run Python from there."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --bg: #060910;
+      --surface: #0d1321;
+      --card: #111d2e;
+      --border: #1e3050;
+      --accent: #facc15;
+      --accent-dim: rgba(250,204,21,.15);
+      --accent-border: rgba(250,204,21,.3);
+      --blue: #38bdf8;
+      --purple: #818cf8;
+      --green: #34d399;
+      --text: #e0eaf8;
+      --muted: #6b87a8;
+      --mono: 'DM Mono', monospace;
+      --sans: 'Outfit', sans-serif;
+      --glow: 0 0 30px rgba(250,204,21,.18);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: var(--sans); font-size: 16px;
+      line-height: 1.75; overflow-x: hidden; padding-bottom: 80px;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image:
+        linear-gradient(rgba(250,204,21,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(250,204,21,.03) 1px, transparent 1px);
+      background-size: 48px 48px; pointer-events: none; z-index: 0;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(6,9,16,.88); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px; height: 60px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { font-weight: 700; font-size: 1rem; color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .nav-logo span { color: var(--blue); }
+    .nav-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 8px var(--blue); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1}50%{opacity:.4} }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: .88rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--blue); }
+    @media(max-width:580px){ .nav-links { display: none; } }
+
+    /* AD BANNER */
+    .ad-banner { width: 100%; min-height: 90px; background: var(--surface); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: center; position: relative; z-index: 10; }
+    .ad-label { font-family: var(--mono); font-size: 9px; color: var(--muted); position: absolute; top: 6px; left: 12px; letter-spacing: .1em; text-transform: uppercase; }
+    .ad-slot { width: 728px; max-width: 95%; height: 90px; background: repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px); border: 1px dashed var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; color: var(--muted); }
+
+    /* HERO */
+    .hero { position: relative; z-index: 2; text-align: center; padding: 80px 24px 60px; max-width: 760px; margin: 0 auto; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; background: var(--accent-dim); border: 1px solid var(--accent-border); color: var(--accent); font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; margin-bottom: 26px; }
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 18px; letter-spacing: -.02em; }
+    h1 span { color: var(--accent); }
+    .hero-sub { font-size: 1.05rem; color: var(--muted); max-width: 560px; margin: 0 auto 34px; font-weight: 300; }
+    .hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #060910; font-weight: 700; font-size: .95rem; padding: 13px 28px; border-radius: 8px; text-decoration: none; transition: box-shadow .2s, transform .15s; box-shadow: var(--glow); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 44px rgba(250,204,21,.35); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--text); font-weight: 600; font-size: .95rem; padding: 13px 28px; border-radius: 8px; border: 1px solid var(--border); text-decoration: none; transition: border-color .2s, transform .15s; }
+    .btn-secondary:hover { border-color: var(--blue); transform: translateY(-2px); }
+
+    /* SECTION */
+    section { position: relative; z-index: 2; max-width: 1000px; margin: 0 auto; padding: 0 24px 70px; }
+    .section-tag { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 10px; }
+    h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; margin-bottom: 10px; letter-spacing: -.02em; }
+    .section-sub { color: var(--muted); font-size: .93rem; max-width: 560px; margin-bottom: 36px; font-weight: 300; }
+
+    /* BENEFITS GRID */
+    .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+    .benefit-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; transition: border-color .2s, transform .2s; }
+    .benefit-card:hover { border-color: var(--accent-border); transform: translateY(-3px); }
+    .benefit-icon { font-size: 1.6rem; margin-bottom: 12px; }
+    .benefit-card h3 { font-size: .95rem; font-weight: 700; margin-bottom: 6px; }
+    .benefit-card p { font-size: .82rem; color: var(--muted); line-height: 1.65; }
+
+    /* DOWNLOAD CARD */
+    .dl-card { background: linear-gradient(135deg, #0d1f10, #111d2e); border: 1px solid var(--accent-border); border-radius: 14px; padding: 36px 32px; text-align: center; box-shadow: var(--glow); }
+    .dl-meta { display: flex; justify-content: center; gap: 0; flex-wrap: wrap; margin-bottom: 28px; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; max-width: 500px; margin-left: auto; margin-right: auto; background: var(--surface); }
+    .dl-meta-item { flex: 1; min-width: 100px; padding: 18px 12px; text-align: center; border-right: 1px solid var(--border); }
+    .dl-meta-item:last-child { border-right: none; }
+    .dl-meta-item .val { font-size: 1.3rem; font-weight: 800; color: var(--accent); display: block; margin-bottom: 4px; }
+    .dl-meta-item .lbl { font-size: .72rem; color: var(--muted); font-family: var(--mono); letter-spacing: .06em; }
+    .dl-note { margin-top: 14px; font-size: .78rem; color: var(--muted); font-family: var(--mono); }
+    .dl-note span { color: var(--green); }
+
+    /* STEPS */
+    .steps-list { display: grid; gap: 16px; }
+    .step { display: grid; grid-template-columns: 48px 1fr; gap: 18px; align-items: start; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: border-color .2s; }
+    .step:hover { border-color: var(--accent-border); }
+    .step-num { width: 48px; height: 48px; border-radius: 10px; background: var(--accent-dim); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: .9rem; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .step-body h3 { font-size: .98rem; font-weight: 700; margin-bottom: 6px; }
+    .step-body p { font-size: .84rem; color: var(--muted); line-height: 1.7; }
+    code { background: rgba(255,255,255,.07); border: 1px solid var(--border); border-radius: 4px; padding: 2px 7px; font-family: var(--mono); font-size: .8rem; color: #a5f3fc; }
+    .code-block { background: #0a0f1e; border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; font-family: var(--mono); font-size: .82rem; color: #a5f3fc; margin-top: 10px; line-height: 1.8; overflow-x: auto; }
+    .code-block .comment { color: var(--muted); }
+
+    /* FAQ */
+    .faq { display: grid; gap: 10px; }
+    details { background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: border-color .2s; }
+    details[open] { border-color: var(--accent-border); }
+    summary { padding: 18px 22px; font-size: .93rem; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '+'; font-size: 1.3rem; color: var(--accent); transition: transform .2s; flex-shrink: 0; }
+    details[open] summary::after { transform: rotate(45deg); }
+    .faq-body { padding: 0 22px 18px; font-size: .85rem; color: var(--muted); line-height: 1.75; }
+
+    /* CTA BANNER */
+    .cta-wrap { position: relative; z-index: 2; max-width: 1000px; margin: 0 auto 70px; padding: 0 24px; }
+    .cta-inner { background: linear-gradient(135deg, #0d1f10, #111d2e); border: 1px solid var(--accent-border); border-radius: 16px; padding: 48px 36px; text-align: center; box-shadow: var(--glow); }
+    .cta-inner h2 { margin-bottom: 10px; }
+    .cta-inner p { color: var(--muted); margin-bottom: 26px; font-size: .95rem; }
+
+    /* AD MID */
+    .ad-mid-wrap { position: relative; z-index: 2; max-width: 1000px; margin: 0 auto 50px; padding: 0 24px; }
+    .ad-mid-inner { min-height: 100px; background: var(--surface); border: 1px dashed var(--border); border-radius: 10px; display: flex; align-items: center; justify-content: center; position: relative; }
+    .ad-mid-slot { width: 728px; max-width: 95%; height: 90px; background: repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px); border: 1px dashed var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; color: var(--muted); }
+
+    /* FOOTER */
+    footer { position: relative; z-index: 2; border-top: 1px solid var(--border); background: var(--surface); padding: 36px 24px 24px; }
+    .footer-inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-brand { font-size: .82rem; color: var(--muted); }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: .82rem; transition: color .2s; }
+    .footer-links a:hover { color: var(--blue); }
+    .footer-bottom { max-width: 1000px; margin: 20px auto 0; padding-top: 16px; border-top: 1px solid var(--border); font-size: .75rem; color: var(--muted); font-family: var(--mono); text-align: center; }
+
+    /* STICKY AD */
+    .ad-sticky { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(13,19,33,.95); backdrop-filter: blur(10px); border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: center; padding: 8px 16px; z-index: 200; gap: 14px; }
+    .ad-sticky-lbl { font-family: var(--mono); font-size: 9px; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+    .ad-sticky-slot { width: 728px; max-width: 80%; height: 60px; background: repeating-linear-gradient(45deg,rgba(255,255,255,.015),rgba(255,255,255,.015) 10px,rgba(255,255,255,.03) 10px,rgba(255,255,255,.03) 20px); border: 1px dashed var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; color: var(--muted); }
+    .close-sticky { background: none; border: 1px solid var(--border); color: var(--muted); width: 28px; height: 28px; border-radius: 50%; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: border-color .2s, color .2s; }
+    .close-sticky:hover { border-color: var(--accent); color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="https://susan-khatri.com.np/" class="nav-logo"><div class="nav-dot"></div>Susan<span>Khatri</span></a>
+    <ul class="nav-links">
+      <li><a href="https://susan-khatri.com.np/">Home</a></li>
+      <li><a href="https://susan-khatri.com.np/java21">Java 21</a></li>
+      <li><a href="https://susan-khatri.com.np/about">About</a></li>
+      <li><a href="https://susan-khatri.com.np/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- TOP AD -->
+  <div class="ad-banner">
+    <span class="ad-label">Advertisement</span>
+    <div class="ad-slot" id="ad-top"><!-- PASTE AD CODE HERE --> 728 × 90 — Leaderboard Ad</div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="badge">🐍 Official Python.org Build · Free · Portable</div>
+    <h1>Run <span>Python 3</span> on School Computers<br/>No Admin Rights Needed</h1>
+    <p class="hero-sub">Python's official embeddable ZIP package lets you run Python scripts anywhere — no installer, no admin password, no IT office visit required.</p>
+    <div class="hero-ctas">
+      <a href="https://www.python.org/ftp/python/3.12.4/python-3.12.4-embed-amd64.zip" class="btn-primary" target="_blank" rel="noopener">
+        🐍 Download Python 3.12 ZIP
+      </a>
+      <a href="#setup" class="btn-secondary">Setup Guide →</a>
+    </div>
+  </div>
+
+  <!-- BENEFITS -->
+  <section>
+    <div class="section-tag">// Why Portable Python?</div>
+    <h2>Everything You Need, Nothing You Don't</h2>
+    <p class="section-sub">The embeddable ZIP is Python's official solution for running Python without a system-wide install.</p>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">🔓</div>
+        <h3>No Admin Rights</h3>
+        <p>Standard Python installers need admin access. The embeddable ZIP needs none — it runs entirely from a folder you control.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">📦</div>
+        <h3>Officially from Python.org</h3>
+        <p>This is not a third-party repack. The embeddable ZIP is released by the Python Software Foundation on the official Python.org website.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">💾</div>
+        <h3>USB Drive Ready</h3>
+        <p>Extract to a USB drive and carry your Python environment to any school computer. No downloading required each time.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">⚡</div>
+        <h3>Lightweight</h3>
+        <p>The embeddable ZIP is under 10 MB — much smaller than the full installer. It downloads in seconds even on slow school Wi-Fi.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🧹</div>
+        <h3>Zero Trace</h3>
+        <p>Nothing is written to the Windows registry. To remove it, just delete the folder. It leaves no trace on the school computer.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">📚</div>
+        <h3>pip & Libraries Work</h3>
+        <p>With one small extra step, you can enable pip and install libraries like numpy, requests, and more — all without admin rights.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD CARD -->
+  <section>
+    <div class="section-tag">// Download</div>
+    <h2>Get the Official Embeddable ZIP</h2>
+    <p class="section-sub">Direct link to the official Python.org embeddable package for Windows 64-bit.</p>
+    <div class="dl-card">
+      <div class="dl-meta">
+        <div class="dl-meta-item"><span class="val">3.12.4</span><span class="lbl">Version</span></div>
+        <div class="dl-meta-item"><span class="val">~10 MB</span><span class="lbl">File Size</span></div>
+        <div class="dl-meta-item"><span class="val">Windows</span><span class="lbl">Platform</span></div>
+        <div class="dl-meta-item"><span class="val">64-bit</span><span class="lbl">Architecture</span></div>
+      </div>
+      <a class="btn-primary" href="https://www.python.org/ftp/python/3.12.4/python-3.12.4-embed-amd64.zip" target="_blank" rel="noopener" style="font-size:1rem; padding:15px 34px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Python 3.12 ZIP (Windows 64-bit)
+      </a>
+      <p class="dl-note"><span>✓</span> Official Python.org build · No installer · No admin rights · No hidden software</p>
+    </div>
+  </section>
+
+  <!-- SETUP GUIDE -->
+  <section id="setup">
+    <div class="section-tag">// Setup Guide</div>
+    <h2>How to Set Up Portable Python</h2>
+    <p class="section-sub">Follow these steps and you will have Python running on your school computer in under five minutes.</p>
+    <div class="steps-list">
+
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <h3>Download the ZIP</h3>
+          <p>Click the download button above. The file is named something like <code>python-3.12.4-embed-amd64.zip</code> and is under 10 MB. It saves directly to your Downloads folder.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <h3>Extract It to a Folder</h3>
+          <p>Right-click the ZIP file → <strong>Extract All…</strong> → choose a location you have write access to, such as your Documents folder or a USB drive. Create a folder called <code>python312</code> to keep things tidy.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <h3>Enable Imports (Important Step)</h3>
+          <p>Inside the extracted folder, find a file named <code>python312._pth</code> (the name may vary slightly by version). Open it with Notepad. Find the line that says <code>#import site</code> and remove the <code>#</code> at the start so it reads <code>import site</code>. Save and close the file. This step is required to make pip and most libraries work.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-body">
+          <h3>Open Command Prompt in That Folder</h3>
+          <p>Open the folder in File Explorer. Click the address bar at the top, type <code>cmd</code>, and press Enter. A Command Prompt window opens already pointing to your Python folder.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">05</div>
+        <div class="step-body">
+          <h3>Verify Python Works</h3>
+          <p>In the Command Prompt window, type the following and press Enter:</p>
+          <div class="code-block">python --version</div>
+          <p style="margin-top:10px;">You should see something like <code>Python 3.12.4</code>. If you do, Python is working correctly.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">06</div>
+        <div class="step-body">
+          <h3>Install pip (So You Can Install Libraries)</h3>
+          <p>Download <a href="https://bootstrap.pypa.io/get-pip.py" target="_blank" rel="noopener" style="color:var(--accent);">get-pip.py</a> from the official pip bootstrap page and save it into your Python folder. Then run:</p>
+          <div class="code-block">python get-pip.py</div>
+          <p style="margin-top:10px;">Once that completes, pip is installed and you can install any library without admin rights.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">07</div>
+        <div class="step-body">
+          <h3>Run Your Python Script</h3>
+          <p>Place your <code>.py</code> file in the same folder, then run it with:</p>
+          <div class="code-block">
+            <span class="comment"># Run a script</span><br/>
+            python myscript.py<br/><br/>
+            <span class="comment"># Install a library (e.g. requests)</span><br/>
+            python -m pip install requests<br/><br/>
+            <span class="comment"># Open the interactive Python shell</span><br/>
+            python
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MID AD -->
+  <div class="ad-mid-wrap">
+    <div class="ad-mid-inner">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-mid-slot" id="ad-mid"><!-- PASTE AD CODE HERE --> 728 × 90 — Mid Page Ad</div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-tag">// FAQ</div>
+    <h2>Frequently Asked Questions</h2>
+    <p class="section-sub">Common questions from students setting up Python on school computers.</p>
+    <div class="faq">
+      <details>
+        <summary>Is it allowed to use this at school?</summary>
+        <div class="faq-body">In most schools, running software from your personal user space is permitted — the restrictions apply to system-wide installation. Since the embeddable ZIP installs nothing and touches no system files, it works within the boundaries of typical school IT policies. Check your own school's rules if you are unsure.</div>
+      </details>
+      <details>
+        <summary>What is the difference between the full Python installer and the embeddable ZIP?</summary>
+        <div class="faq-body">The full installer requires admin rights and installs Python system-wide so all users on the computer can use it. The embeddable ZIP is a self-contained folder that only you can access, requires no admin rights, and can be deleted without leaving any trace. For school use, the embeddable ZIP is the right choice.</div>
+      </details>
+      <details>
+        <summary>Can I install numpy, pandas, or other libraries?</summary>
+        <div class="faq-body">Yes. After completing step 3 (enabling imports) and step 6 (installing pip), you can install any library using <code>python -m pip install library-name</code>. Libraries are installed inside your portable Python folder and do not require admin rights.</div>
+      </details>
+      <details>
+        <summary>Does this work on a USB drive?</summary>
+        <div class="faq-body">Yes. Extract the ZIP to a USB drive and it works on any Windows school computer. Just open Command Prompt, navigate to the USB drive letter (e.g. <code>cd E:\python312</code>), and run Python from there. Your scripts and installed libraries travel with you.</div>
+      </details>
+      <details>
+        <summary>Why does my school computer show a warning when I run Python?</summary>
+        <div class="faq-body">Windows sometimes shows a SmartScreen warning for programs it has not seen before. Since this is an official Python.org file, it is completely safe. Click "More info" and then "Run anyway" to proceed. This only happens the first time.</div>
+      </details>
+      <details>
+        <summary>Which version of Python should I use?</summary>
+        <div class="faq-body">Python 3.12 is the current stable release and is recommended for all new learners. If your teacher or course specifically requires a different version, Python.org provides embeddable ZIPs for all versions on their downloads page.</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-wrap">
+    <div class="cta-inner">
+      <h2>Ready to Start Coding in Python?</h2>
+      <p>Download the portable ZIP now and have Python running on your school computer in under five minutes.</p>
+      <a href="https://www.python.org/ftp/python/3.12.4/python-3.12.4-embed-amd64.zip" class="btn-primary" target="_blank" rel="noopener" style="font-size:1rem; padding:15px 32px;">
+        🐍 Download Python 3.12 ZIP — Free
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">© 2025 susan-khatri.com.np · All rights reserved</div>
+      <div class="footer-links">
+        <a href="https://susan-khatri.com.np/">Home</a>
+        <a href="https://susan-khatri.com.np/java21">Java 21</a>
+        <a href="https://susan-khatri.com.np/about">About</a>
+        <a href="https://susan-khatri.com.np/contact">Contact</a>
+        <a href="https://susan-khatri.com.np/privacy">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Python is a trademark of the Python Software Foundation · Downloads link to official Python.org builds · susan-khatri.com.np
+    </div>
+  </footer>
+
+  <!-- STICKY AD -->
+  <div class="ad-sticky" id="sticky-ad">
+    <span class="ad-sticky-lbl">Ad</span>
+    <div class="ad-sticky-slot" id="ad-bottom"><!-- PASTE AD CODE HERE --> 728 × 60 — Sticky Footer Ad</div>
+    <button class="close-sticky" onclick="document.getElementById('sticky-ad').style.display='none'" title="Close">×</button>
+  </div>
+
+</body>
+</html>
