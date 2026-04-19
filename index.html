@@ -1,75 +1,739 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Susan Khatri | CV</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- ═══════════════════════════════════════
+       PRIMARY SEO TAGS
+  ════════════════════════════════════════ -->
+  <title>Java 21 ZIP Download – No Admin Rights Needed | For School Computers</title>
+  <meta name="description" content="Download Java 21 JDK as a portable ZIP file — no installation, no admin rights required. Perfect for school computers. Just extract and run. Free, official Oracle build." />
+  <meta name="keywords" content="Java 21 zip download, Java 21 portable, Java without admin rights, Java for school computers, JDK 21 zip, Java 21 no install, portable Java, Java 21 Windows zip, download Java school, Java 21 LTS zip" />
+  <meta name="author" content="susan-khatri.com.np" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://susan-khatri.com.np/" />
+
+  <!-- ═══════════════════════════════════════
+       OPEN GRAPH (Facebook, WhatsApp, Discord)
+  ════════════════════════════════════════ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://susan-khatri.com.np/" />
+  <meta property="og:title" content="Java 21 ZIP Download – No Admin Rights Needed" />
+  <meta property="og:description" content="Download Java 21 JDK as a portable ZIP. No installation, no admin rights needed. Perfect for school computers. Just extract and run." />
+  <meta property="og:image" content="https://susan-khatri.com.np/og-image.png" />
+  <meta property="og:site_name" content="Susan Khatri – Java Tools" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- ═══════════════════════════════════════
+       TWITTER CARD
+  ════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Java 21 ZIP Download – No Admin Rights Needed" />
+  <meta name="twitter:description" content="Download Java 21 JDK as a portable ZIP. No installation, no admin rights needed. Perfect for school computers." />
+  <meta name="twitter:image" content="https://susan-khatri.com.np/og-image.png" />
+
+  <!-- ═══════════════════════════════════════
+       SCHEMA MARKUP (Google Rich Results)
+  ════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Java 21 JDK Portable ZIP",
+    "operatingSystem": "Windows",
+    "applicationCategory": "DeveloperApplication",
+    "description": "Java 21 JDK portable ZIP download for school computers. No admin rights or installation required.",
+    "url": "https://susan-khatri.com.np/",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Susan Khatri",
+      "url": "https://susan-khatri.com.np"
+    }
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════
+       BREADCRUMB SCHEMA
+  ════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://susan-khatri.com.np/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Java 21 ZIP Download",
+        "item": "https://susan-khatri.com.np/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════
+       FAQ SCHEMA (Google shows these in search!)
+  ════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I use Java 21 ZIP at school without admin rights?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The ZIP version of Java 21 does not require installation or admin rights. Just extract the ZIP to any folder you have access to and run Java from there."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between JDK and JRE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The JDK (Java Development Kit) lets you compile and run Java programs. The JRE (Java Runtime Environment) only lets you run them. For school projects, you almost always want the JDK."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Java 21 ZIP work on a USB drive?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can extract the Java 21 ZIP to a USB drive and carry your Java environment to any computer. Just set JAVA_HOME to the folder on the USB drive each time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why use Java 21 specifically?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Java 21 is a Long-Term Support (LTS) release, meaning it will be maintained and updated for many years. It is the safest and most stable choice for students."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --surface: #111827;
+      --card: #1a2235;
+      --border: #2a3a55;
+      --accent: #f97316;
+      --accent2: #3b82f6;
+      --text: #e2e8f0;
+      --muted: #7b93b8;
+      --green: #22c55e;
+      --mono: 'Space Mono', monospace;
+      --sans: 'Syne', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── Grid background ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(59,130,246,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59,130,246,.06) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── TOP AD BANNER ── */
+    .ad-banner {
+      width: 100%;
+      min-height: 90px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 10;
+    }
+    .ad-banner .ad-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--muted);
+      position: absolute;
+      top: 6px;
+      left: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .ad-slot {
+      width: 728px;
+      max-width: 95%;
+      height: 90px;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255,.02),
+        rgba(255,255,255,.02) 10px,
+        rgba(255,255,255,.04) 10px,
+        rgba(255,255,255,.04) 20px
+      );
+      border: 1px dashed var(--border);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: .06em;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: relative;
+      z-index: 2;
+      padding: 52px 24px 36px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(249,115,22,.15);
+      border: 1px solid rgba(249,115,22,.4);
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+    h1 span { color: var(--accent); }
+    .sub {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── MAIN LAYOUT ── */
+    main {
+      position: relative;
+      z-index: 2;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+      display: grid;
+      gap: 24px;
+    }
+
+    /* ── CARDS ── */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 30px;
+      transition: border-color .2s;
+    }
+    .card:hover { border-color: rgba(59,130,246,.4); }
+    .card-title {
+      font-size: .72rem;
+      font-family: var(--mono);
+      color: var(--accent2);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    /* ── WHY SECTION ── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 4px;
+    }
+    .why-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px 16px;
+    }
+    .why-icon { font-size: 1.6rem; margin-bottom: 8px; }
+    .why-item h3 { font-size: .9rem; font-weight: 600; margin-bottom: 4px; }
+    .why-item p { font-size: .8rem; color: var(--muted); line-height: 1.55; }
+
+    /* ── STEPS ── */
+    .steps { display: grid; gap: 14px; }
+    .step {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+    .step-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: rgba(59,130,246,.15);
+      border: 1px solid rgba(59,130,246,.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: .85rem;
+      color: var(--accent2);
+      flex-shrink: 0;
+      font-weight: 700;
+    }
+    .step-body h3 { font-size: .95rem; margin-bottom: 4px; }
+    .step-body p { font-size: .82rem; color: var(--muted); line-height: 1.6; }
+    code {
+      background: rgba(255,255,255,.07);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-family: var(--mono);
+      font-size: .8rem;
+      color: #a5f3fc;
+    }
+
+    /* ── DOWNLOAD BUTTON CARD ── */
+    .dl-card {
+      background: linear-gradient(135deg, #0f1e38, #1a2235);
+      border: 1px solid rgba(249,115,22,.4);
+      text-align: center;
+    }
+    .dl-meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .dl-meta-item { text-align: center; }
+    .dl-meta-item .val {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--accent);
+      display: block;
+    }
+    .dl-meta-item .lbl {
+      font-size: .72rem;
+      color: var(--muted);
+      font-family: var(--mono);
+      letter-spacing: .07em;
+    }
+    .divider-v {
+      width: 1px;
+      background: var(--border);
+      align-self: stretch;
+    }
+
+    .btn-dl {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background .2s, transform .15s, box-shadow .2s;
+      box-shadow: 0 4px 20px rgba(249,115,22,.35);
+    }
+    .btn-dl:hover {
+      background: #ea6c0a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(249,115,22,.45);
+    }
+    .btn-dl svg { flex-shrink: 0; }
+
+    .dl-note {
+      margin-top: 14px;
+      font-size: .78rem;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+    .dl-note span { color: var(--green); }
+
+    /* ── INLINE AD (mid-page) ── */
+    .ad-inline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 250px;
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: 10px;
+      position: relative;
+    }
+    .ad-inline .ad-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--muted);
+      position: absolute;
+      top: 8px;
+      left: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .ad-inner {
+      width: 300px;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255,.02),
+        rgba(255,255,255,.02) 10px,
+        rgba(255,255,255,.04) 10px,
+        rgba(255,255,255,.04) 20px
+      );
+      border: 1px dashed var(--border);
+      border-radius: 6px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: .05em;
+      text-align: center;
+      padding: 12px;
+    }
+
+    /* ── FAQ ── */
+    .faq { display: grid; gap: 10px; }
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    details[open] { border-color: rgba(59,130,246,.4); }
+    summary {
+      padding: 15px 18px;
+      font-size: .92rem;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    summary::after {
+      content: '+';
+      font-size: 1.2rem;
+      color: var(--accent2);
+      transition: transform .2s;
+    }
+    details[open] summary::after { transform: rotate(45deg); }
+    .faq-body {
+      padding: 0 18px 16px;
+      font-size: .83rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 24px;
+      font-size: .75rem;
+      color: var(--muted);
+      font-family: var(--mono);
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── BOTTOM STICKY AD ── */
+    .ad-sticky {
+      position: fixed;
+      bottom: 0;
+      left: 0; right: 0;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      z-index: 100;
+      gap: 12px;
+    }
+    .ad-sticky .ad-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .ad-sticky-slot {
+      width: 728px;
+      max-width: 80%;
+      height: 60px;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255,.02),
+        rgba(255,255,255,.02) 10px,
+        rgba(255,255,255,.04) 10px,
+        rgba(255,255,255,.04) 20px
+      );
+      border: 1px dashed var(--border);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: .06em;
+    }
+    .close-sticky {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 14px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      transition: border-color .2s, color .2s;
+    }
+    .close-sticky:hover { border-color: var(--accent); color: var(--accent); }
+
+    body { padding-bottom: 80px; }
+  </style>
 </head>
 <body>
+
+  <!-- ═══════════════════════════════════════
+       TOP BANNER AD  (728×90 leaderboard)
+       Replace .ad-slot contents with your
+       ad network tag / AdSense unit
+  ════════════════════════════════════════ -->
+  <div class="ad-banner">
+    <span class="ad-label">Advertisement</span>
+    <div class="ad-slot" id="ad-top">
+      <!-- PASTE YOUR AD CODE HERE →  e.g. Google AdSense ins tag -->
+      728 × 90 — Leaderboard Ad
+    </div>
+  </div>
+
   <header>
-    <h1>Susan Khatri</h1>
-    <p>Curriculum Vitae</p>
+    <div class="badge">Free · No Install Required · Portable</div>
+    <h1>Java <span>21</span> ZIP Download<br/>For School Computers</h1>
+    <p class="sub">No admin rights? No problem. Download Java 21 as a portable ZIP — just extract and run, nothing to install.</p>
   </header>
 
-  <main class="cv-container">
-    <section class="card">
-      <h2>Profile</h2>
-      <p>
-        Motivated undergraduate student with a strong interest in web development and product building.
-        I enjoy creating simple, useful digital solutions and continuously improving my technical and communication skills.
-      </p>
-    </section>
+  <main>
 
-    <section class="card">
-      <h2>Contact</h2>
-      <ul class="cv-list">
-        <li><strong>Email:</strong> susankhatri291@gmail.com</li>
-        <li><strong>Phone:</strong> +977-9820219281</li>
-        <li><strong>Location:</strong> Kathmandu, Nepal</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Skills</h2>
-      <ul class="cv-list">
-        <li>HTML, CSS, JavaScript, C++, QBASIC, Python</li>
-        <li>Responsive web design</li>
-        <li>Problem solving and teamwork</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Education</h2>
-      <p><strong>+2 course. Class 11 (Ongoing)</strong></p>
-      <p>Undergraduate student.</p>
-    </section>
-
-    <section class="card">
-      <h2>Projects</h2>
-      <div class="project-item">
-        <h3>Personal Website</h3>
-        <p>Designed and built a personal website to present my profile, projects, and learning progress.</p>
+    <!-- WHY PORTABLE -->
+    <div class="card">
+      <div class="card-title">// Why ZIP / Portable?</div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon">🔒</div>
+          <h3>No Admin Needed</h3>
+          <p>Standard Java installers require admin rights. A ZIP file needs none.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">📦</div>
+          <h3>Self-Contained</h3>
+          <p>Everything is inside one folder. Unzip, done. Nothing touches the system.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">💾</div>
+          <h3>USB Friendly</h3>
+          <p>Drop it on a USB drive and carry your Java environment anywhere.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">🗑️</div>
+          <h3>Clean Removal</h3>
+          <p>To uninstall, just delete the folder. No registry, no traces.</p>
+        </div>
       </div>
-      <div class="project-item">
-        <h3>Campus Marketplace Prototype</h3>
-        <p>Created a prototype marketplace concept for students to post and discover learning resources.</p>
-      </div>
-    </section>
+    </div>
 
-    <section class="card">
-      <h2>Languages</h2>
-      <ul class="cv-list">
-        <li>English</li>
-        <li>Nepali</li>
-        <li>Hindi</li>
-      </ul>
-    </section>
+    <!-- HOW TO USE -->
+    <div class="card">
+      <div class="card-title">// How to Use It</div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <h3>Download the ZIP below</h3>
+            <p>Click the download button to get the official Java 21 (JDK) ZIP package for Windows.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h3>Extract the ZIP</h3>
+            <p>Right-click the downloaded file → <strong>Extract All…</strong> → choose any folder you have access to (e.g. Documents or a USB drive).</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h3>Set JAVA_HOME (optional but recommended)</h3>
+            <p>Open Command Prompt and temporarily set: <code>set JAVA_HOME=C:\path\to\jdk-21</code><br/>Then add to PATH: <code>set PATH=%JAVA_HOME%\bin;%PATH%</code></p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div class="step-body">
+            <h3>Verify it works</h3>
+            <p>Run <code>java -version</code> in Command Prompt. You should see <code>java version "21.x.x"</code>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">05</div>
+          <div class="step-body">
+            <h3>Run your program</h3>
+            <p>Compile with <code>javac MyProgram.java</code> and run with <code>java MyProgram</code>. All without installing anything!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DOWNLOAD BUTTON -->
+    <div class="card dl-card">
+      <div class="card-title">// Download Java 21 LTS – Official Oracle ZIP</div>
+      <div class="dl-meta">
+        <div class="dl-meta-item">
+          <span class="val">21.0.7</span>
+          <span class="lbl">Version</span>
+        </div>
+        <div class="divider-v"></div>
+        <div class="dl-meta-item">
+          <span class="val">LTS</span>
+          <span class="lbl">Release Type</span>
+        </div>
+        <div class="divider-v"></div>
+        <div class="dl-meta-item">
+          <span class="val">~180MB</span>
+          <span class="lbl">File Size</span>
+        </div>
+        <div class="divider-v"></div>
+        <div class="dl-meta-item">
+          <span class="val">Windows</span>
+          <span class="lbl">Platform</span>
+        </div>
+      </div>
+
+      <!-- 
+        DOWNLOAD LINK: Update the href to your actual hosted ZIP, 
+        or point directly to Oracle/OpenJDK's download URL.
+        Oracle direct link example (update version as needed):
+        https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.zip
+      -->
+      <a class="btn-dl" href="https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.zip" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Download JDK 21 ZIP (Windows x64)
+      </a>
+
+      <p class="dl-note"><span>✓</span> Official Oracle build · No malware · No installer · No admin rights needed</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         INLINE AD  (300×250 medium rectangle)
+         Replace .ad-inner contents with your
+         ad network tag
+    ════════════════════════════════════════ -->
+    <div class="ad-inline">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-inner" id="ad-mid">
+        <!-- PASTE YOUR AD CODE HERE -->
+        300 × 250 — Medium Rectangle Ad
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="card">
+      <div class="card-title">// FAQ</div>
+      <div class="faq">
+        <details>
+          <summary>Is this legal to use at school?</summary>
+          <div class="faq-body">Yes. Downloading and running software from your personal user space is typically allowed, and Java is free to use under Oracle's license for personal and educational use. Always double-check your school's IT policy to be sure.</div>
+        </details>
+        <details>
+          <summary>Does this work on Mac or Linux too?</summary>
+          <div class="faq-body">Yes! Oracle and Adoptium both provide ZIP/tar.gz packages for macOS and Linux. The steps are the same — extract the archive, set <code>JAVA_HOME</code>, and you're ready.</div>
+        </details>
+        <details>
+          <summary>What's the difference between JDK and JRE?</summary>
+          <div class="faq-body">The JDK (Java Development Kit) lets you compile AND run Java programs. The JRE (Java Runtime Environment) only lets you run them. For school projects, you almost always want the JDK.</div>
+        </details>
+        <details>
+          <summary>Why Java 21 specifically?</summary>
+          <div class="faq-body">Java 21 is a Long-Term Support (LTS) release, meaning Oracle and OpenJDK will keep it updated and secure for years. It's the safest, most stable choice for students and developers alike.</div>
+        </details>
+        <details>
+          <summary>Will the settings reset after I log off?</summary>
+          <div class="faq-body">The <code>set</code> command in CMD only applies to the current session. You'll need to re-run the two <code>set</code> commands each time you open a new terminal. To save yourself time, create a small <code>setjava.bat</code> file that runs both commands automatically.</div>
+        </details>
+      </div>
+    </div>
+
   </main>
+
   <footer>
-    <p>&copy; 2026 Susan Khatri. All rights reserved.</p>
-</footer>
-  <a href="https://download.oracle.com/java/21/archive/jdk-21.0.7_windows-x64_bin.zip">Download Java 21 (Windows x64 ZIP)</a>
+    Java is a trademark of Oracle Corporation &nbsp;·&nbsp; This page links to the official Oracle download &nbsp;·&nbsp; For educational use
+  </footer>
+
+  <!-- ═══════════════════════════════════════
+       STICKY BOTTOM AD  (728×60 footer bar)
+       Replace .ad-sticky-slot contents with
+       your ad network tag
+  ════════════════════════════════════════ -->
+  <div class="ad-sticky" id="sticky-ad">
+    <span class="ad-label">Ad</span>
+    <div class="ad-sticky-slot" id="ad-bottom">
+      <!-- PASTE YOUR AD CODE HERE -->
+      728 × 60 — Sticky Footer Ad
+    </div>
+    <button class="close-sticky" onclick="document.getElementById('sticky-ad').style.display='none'" title="Close ad">×</button>
+  </div>
+
 </body>
 </html>
-
