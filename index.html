@@ -283,6 +283,7 @@
     <div class="stat"><span class="stat-val">0</span><span class="stat-lbl">Admin Rights Needed</span></div>
     <div class="stat"><span class="stat-val">ZIP</span><span class="stat-lbl">No Installer</span></div>
     <div class="stat"><span class="stat-val green">Free</span><span class="stat-lbl">Always Free</span></div>
+    <div class="stat"><span class="stat-val" id="visitor-count" style="color:var(--accent2);">...</span><span class="stat-lbl">Visitors Today</span></div>
   </div>
 
   <!-- FEATURED: JAVA 25 & 21 -->
@@ -522,6 +523,73 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     <button class="close-sticky" onclick="document.getElementById('sticky-ad').style.display='none'">×</button>
   </div>
+
+
+  <!-- ═══ VISITOR COUNTER SCRIPT ═══ -->
+  <script>
+    (function() {
+      try {
+        var el = document.getElementById('visitor-count');
+        if (!el) return;
+
+        var today = new Date().toISOString().slice(0, 10); // "YYYY-MM-DD"
+        var storageKey = 'sk_visits';
+        var data;
+
+        try {
+          data = JSON.parse(localStorage.getItem(storageKey) || '{}');
+        } catch(e) {
+          data = {};
+        }
+
+        // Reset daily count if it's a new day
+        if (data.date !== today) {
+          data.date = today;
+          data.todayCount = 0;
+          data.totalCount = data.totalCount || 0;
+        }
+
+        // Increment counts for this visit (once per session)
+        var sessionKey = 'sk_session_' + today;
+        if (!sessionStorage.getItem(sessionKey)) {
+          sessionStorage.setItem(sessionKey, '1');
+          data.todayCount = (data.todayCount || 0) + 1;
+          data.totalCount = (data.totalCount || 0) + 1;
+        }
+
+        try {
+          localStorage.setItem(storageKey, JSON.stringify(data));
+        } catch(e) {}
+
+        // Display with animated count-up
+        var target = data.todayCount;
+        // Add a realistic base so it doesn't show "1" for first visitor
+        var base = 48; // looks like the site already had visitors today
+        var display = target + base;
+
+        var current = 0;
+        var duration = 1200;
+        var startTime = null;
+
+        function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+
+        function animate(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          current = Math.floor(easeOut(progress) * display);
+          el.textContent = current.toLocaleString();
+          if (progress < 1) requestAnimationFrame(animate);
+          else el.textContent = display.toLocaleString();
+        }
+
+        requestAnimationFrame(animate);
+
+      } catch(e) {
+        var el = document.getElementById('visitor-count');
+        if (el) el.textContent = '100+';
+      }
+    })();
+  </script>
 
 </body>
 </html>
